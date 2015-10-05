@@ -382,3 +382,14 @@ input {
 	font-size: 25px;
 	font-weight: 300;
 }
+
+.skills-list {
+	width: 88%;
+	margin: 0 auto;
+}
+
+.skills-list > .colored:before {
+	font-size: 80px;
+	margin: 0 40px;
+	line-height: 120px;
+}
