@@ -45,6 +45,7 @@
 			height: 60px;
 		}
 
+		// We could create a setTimeout to change the state on each item class but this way is much faster.
 		&:nth-child(1) {
 			@include popIn(0.3s);
 		}
