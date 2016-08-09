@@ -7,10 +7,12 @@ import React, {
 
 class Content extends Component {
 	render () {
-		if (this.props.currentPage === 'Home') {return null;}
+		if (this.props.currentPage === 'home') {return null;}
 
 		return (
-			<div>geg</div>
+			<div className="Content__Wrapper">
+				geg
+			</div>
 		)
 	}
 }

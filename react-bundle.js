@@ -58,13 +58,9 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _Avatars = __webpack_require__(200);
+	var _App = __webpack_require__(203);
 	
-	var _Avatars2 = _interopRequireDefault(_Avatars);
-	
-	var _Content = __webpack_require__(179);
-	
-	var _Content2 = _interopRequireDefault(_Content);
+	var _App2 = _interopRequireDefault(_App);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -74,18 +70,17 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	// import Avatars from './src/Main/Components/Avatars';
+	// import Content from './src/Main/Components/Content';
+	
+	
 	var Index = function (_Component) {
 		_inherits(Index, _Component);
 	
-		function Index(props) {
+		function Index() {
 			_classCallCheck(this, Index);
 	
-			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Index).call(this, props));
-	
-			_this.state = {
-				currentPage: 'Home'
-			};
-			return _this;
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Index).apply(this, arguments));
 		}
 	
 		_createClass(Index, [{
@@ -94,28 +89,8 @@
 				return _react2.default.createElement(
 					'div',
 					{ className: 'Styleguide' },
-					_react2.default.createElement(_Avatars2.default, {
-						currentPage: this.state.currentPage,
-						onAvatarClick: function (_onAvatarClick) {
-							function onAvatarClick() {
-								return _onAvatarClick.apply(this, arguments);
-							}
-	
-							onAvatarClick.toString = function () {
-								return _onAvatarClick.toString();
-							};
-	
-							return onAvatarClick;
-						}(function () {
-							return onAvatarClick();
-						}) }),
-					_react2.default.createElement(_Content2.default, { currentPage: this.state.currentPage })
+					_react2.default.createElement(_App2.default, null)
 				);
-			}
-		}, {
-			key: 'onAvatarClick',
-			value: function onAvatarClick(avatar) {
-				this.setState({ currentPage: avatar.value });
 			}
 		}]);
 	
@@ -21916,13 +21891,13 @@
 		_createClass(Content, [{
 			key: 'render',
 			value: function render() {
-				if (this.props.currentPage === 'Home') {
+				if (this.props.currentPage === 'home') {
 					return null;
 				}
 	
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ className: 'Content__Wrapper' },
 					'geg'
 				);
 			}
@@ -22036,7 +22011,7 @@
 								className: "Avatars__Avatar " + viewStyle + viewDisable,
 								style: { backgroundImage: 'url(' + avatar.url + ')' },
 								onClick: function onClick() {
-									return _this2.onAvatarClick();
+									return _this2.onAvatarClick(avatar.value);
 								}
 							});
 						})
@@ -22045,10 +22020,12 @@
 			}
 		}, {
 			key: 'onAvatarClick',
-			value: function onAvatarClick() {
+			value: function onAvatarClick(value) {
 				var _this3 = this;
 	
 				this.setState({ disable: true });
+				this.props.onAvatarClick(value);
+	
 				setTimeout(function () {
 					_this3.setState({
 						sideView: !_this3.state.sideView,
@@ -22107,6 +22084,86 @@
 	
 	// exports
 
+
+/***/ },
+/* 203 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	__webpack_require__(1);
+	
+	var _react = __webpack_require__(5);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(39);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _Avatars = __webpack_require__(200);
+	
+	var _Avatars2 = _interopRequireDefault(_Avatars);
+	
+	var _Content = __webpack_require__(179);
+	
+	var _Content2 = _interopRequireDefault(_Content);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var App = function (_Component) {
+		_inherits(App, _Component);
+	
+		function App(props) {
+			_classCallCheck(this, App);
+	
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
+	
+			_this.state = {
+				currentPage: 'home'
+			};
+			return _this;
+		}
+	
+		_createClass(App, [{
+			key: 'render',
+			value: function render() {
+				var _this2 = this;
+	
+				return _react2.default.createElement(
+					'div',
+					{ className: 'App__Wrapper' },
+					_react2.default.createElement(_Avatars2.default, {
+						currentPage: this.state.currentPage,
+						onAvatarClick: function onAvatarClick(value) {
+							return _this2.onAvatarClick(value);
+						} }),
+					_react2.default.createElement(_Content2.default, { currentPage: this.state.currentPage })
+				);
+			}
+		}, {
+			key: 'onAvatarClick',
+			value: function onAvatarClick(value) {
+				this.setState({ currentPage: value });
+			}
+		}]);
+	
+		return App;
+	}(_react.Component);
+	
+	exports.default = App;
 
 /***/ }
 /******/ ]);

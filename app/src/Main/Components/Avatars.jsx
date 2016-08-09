@@ -50,7 +50,7 @@ class Avatars extends Component {
 							key={index}
 							className={"Avatars__Avatar " + viewStyle + viewDisable}
 							style={{backgroundImage:'url(' + avatar.url + ')'}}
-							onClick={() => this.onAvatarClick()}
+							onClick={() => this.onAvatarClick(avatar.value)}
 							>
 						</div>
 					))}
@@ -59,8 +59,10 @@ class Avatars extends Component {
 		)
 	}
 
-	onAvatarClick () {
+	onAvatarClick (value) {
 		this.setState({disable: true});
+		this.props.onAvatarClick(value);
+		
 		setTimeout(() => {
 			this.setState({
 				sideView: !this.state.sideView,
