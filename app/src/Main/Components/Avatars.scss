@@ -45,6 +45,11 @@
 		&.sideContent {
 			width: 60px;
 			height: 60px;
+
+			@media (min-width: $site-width-tablet) {
+				width: 90px;
+				height: 90px;
+			}
 		}
 
 		// We could create a setTimeout to change the state on each item class but this way is much faster.
