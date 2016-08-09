@@ -61,9 +61,9 @@ class Avatars extends Component {
 
 	onAvatarClick (value) {
 		this.setState({disable: true});
-		this.props.onAvatarClick(value);
-		
+
 		setTimeout(() => {
+			this.props.onAvatarClick(value);
 			this.setState({
 				sideView: !this.state.sideView,
 				disable: false,

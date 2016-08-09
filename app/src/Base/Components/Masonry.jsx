@@ -40,8 +40,6 @@ class Masonry extends Component {
 	}
 
 	render () {
-		return null;
-		
 		const windowWidth = this.state.windowWidth;
 		const displayStyle = !this.state.imagesLoaded ? 'none' : 'inline-block';
 		var imageWidth;

@@ -1,0 +1,16 @@
+@import '../stylesheets/_main.scss';
+
+.App {
+
+	&__Wrapper {
+		display: flex;
+
+		&.HomeView {
+			flex-direction: column;
+		}
+
+		&.ActiveView {
+			flex-direction: row;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 'use strict';
 
-import '../stylesheets/_styleguide.scss';
+import './App.scss';
 import React, {
 	Component
 } from 'react';
@@ -18,8 +18,10 @@ class App extends Component {
 	}
 
 	render () {
+		const viewStyle = this.state.currentPage === 'home' ?  'HomeView' : 'ActiveView';
+
 		return (
-			<div className="App__Wrapper">
+			<div className={"App__Wrapper " + viewStyle}>
 				<Avatars
 					currentPage={this.state.currentPage}
 					onAvatarClick={(value) => this.onAvatarClick(value)}/>

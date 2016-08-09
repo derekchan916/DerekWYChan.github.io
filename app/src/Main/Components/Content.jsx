@@ -4,6 +4,7 @@ import React, {
 	Component,
 	PropTypes
 } from 'react';
+import HaylieMasonry from '../../Haylie/Components/HaylieMasonry';
 
 class Content extends Component {
 	render () {
@@ -11,7 +12,7 @@ class Content extends Component {
 
 		return (
 			<div className="Content__Wrapper">
-				geg
+				<HaylieMasonry />
 			</div>
 		)
 	}
