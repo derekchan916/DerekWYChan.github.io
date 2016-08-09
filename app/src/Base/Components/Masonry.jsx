@@ -9,7 +9,7 @@ import MasonryComponent from 'react-masonry-component'; // Component from https:
 import _ from 'lodash';
 import Config from '../../Main/Config';
 
-const ImageCount = 7;
+const ImageCount = 24;
 
 class Masonry extends Component {
 	constructor (props) {
