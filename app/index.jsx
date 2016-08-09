@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 import ReactDOM from 'react-dom';
 
+import Avatars from './src/Main/Components/Avatars';
 import Content from './src/Main/Components/Content';
 
 class Index extends Component {
@@ -19,11 +20,16 @@ class Index extends Component {
 	render () {
 		return (
 			<div className="Styleguide">
-				<Content
+				<Avatars
 					currentPage={this.state.currentPage}
-					/>
+					onAvatarClick={() => onAvatarClick()}/>
+				<Content currentPage={this.state.currentPage}/>
 			</div>
 		)
+	}
+
+	onAvatarClick (avatar) {
+		this.setState({currentPage: avatar.value})
 	}
 }
 
