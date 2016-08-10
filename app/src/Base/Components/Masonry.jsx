@@ -43,6 +43,7 @@ class Masonry extends Component {
 		const windowWidth = this.state.windowWidth;
 		const displayStyle = !this.state.imagesLoaded ? 'none' : 'inline-block';
 		// const link = 'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_'+ imageWidth + '/haylie-wu' + imageNum
+		// const getImagesbyTagUrl = 'http://res.cloudinary.com/dqqac1ydh/image/list/haylie.json';
 		var imageWidth;
 
 		switch (true) {
