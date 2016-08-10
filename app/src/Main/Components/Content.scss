@@ -1,0 +1,14 @@
+@import '../../../stylesheets/_main.scss';
+
+.Content {
+
+	&__Wrapper {
+		border-left: 1px solid #cccccc;
+		transform: translateX(100%);
+
+		&.animate {
+			transition: all 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+			transform: translateX(0%);
+		}
+	}
+}

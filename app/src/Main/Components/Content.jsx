@@ -1,5 +1,6 @@
 'use strict';
 
+import './Content.scss';
 import React, {
 	Component,
 	PropTypes
@@ -11,7 +12,7 @@ class Content extends Component {
 		if (this.props.currentPage === 'home') {return null;}
 
 		return (
-			<div className="Content__Wrapper">
+			<div className="Content__Wrapper animate">
 				<HaylieMasonry />
 			</div>
 		)

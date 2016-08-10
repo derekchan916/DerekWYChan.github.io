@@ -132,7 +132,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 700;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Bold.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 500;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Regular.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 300;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Light.ttf\") format(\"truetype\"); }\n\n.Styleguide {\n  font-family: Comfortaa; }\n  .Styleguide h1 {\n    display: inline;\n    font-size: 22px; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 700;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Bold.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 500;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Regular.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 300;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Light.ttf\") format(\"truetype\"); }\n\n.Styleguide {\n  font-family: Comfortaa; }\n  .Styleguide h1 {\n    display: inline;\n    font-size: 22px; }\n", ""]);
 	
 	// exports
 
@@ -21968,7 +21968,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n.App__Wrapper {\n  display: flex; }\n  .App__Wrapper.HomeView {\n    flex-direction: column; }\n  .App__Wrapper.ActiveView {\n    flex-direction: row; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.App__Wrapper {\n  display: flex; }\n  .App__Wrapper.HomeView {\n    flex-direction: column; }\n  .App__Wrapper.ActiveView {\n    flex-direction: row; }\n", ""]);
 	
 	// exports
 
@@ -22121,7 +22121,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n.Avatars__Wrapper {\n  display: flex;\n  flex-direction: column;\n  margin-top: 80px; }\n  .Avatars__Wrapper.mainContent {\n    align-items: center; }\n  .Avatars__Wrapper.sideContent {\n    align-items: flex-start; }\n\n.Avatars__Container {\n  display: flex;\n  justify-content: space-around; }\n  .Avatars__Container.mainContent {\n    flex-wrap: wrap;\n    max-width: 700px;\n    margin: 0 20px; }\n  .Avatars__Container.sideContent {\n    flex-direction: column; }\n\n.Avatars__Avatar {\n  background-size: 100%;\n  margin: 10px; }\n  .Avatars__Avatar.mainContent {\n    width: 150px;\n    height: 150px; }\n  .Avatars__Avatar.sideContent {\n    width: 60px;\n    height: 60px; }\n    @media (min-width: 768px) {\n      .Avatars__Avatar.sideContent {\n        width: 90px;\n        height: 90px; } }\n  .Avatars__Avatar:nth-child(1) {\n    animation-fill-mode: forwards;\n    animation: popIn 0.3s;\n    -webkit-animation: popIn 0.3s;\n    -moz-animation: popIn 0.3s;\n    -ms-animation: popIn 0.3s; }\n  .Avatars__Avatar:nth-child(2) {\n    animation-fill-mode: forwards;\n    animation: popIn 0.6s;\n    -webkit-animation: popIn 0.6s;\n    -moz-animation: popIn 0.6s;\n    -ms-animation: popIn 0.6s; }\n  .Avatars__Avatar:nth-child(3) {\n    animation-fill-mode: forwards;\n    animation: popIn 0.9s;\n    -webkit-animation: popIn 0.9s;\n    -moz-animation: popIn 0.9s;\n    -ms-animation: popIn 0.9s; }\n  .Avatars__Avatar:nth-child(4) {\n    animation-fill-mode: forwards;\n    animation: popIn 1.2s;\n    -webkit-animation: popIn 1.2s;\n    -moz-animation: popIn 1.2s;\n    -ms-animation: popIn 1.2s; }\n  .Avatars__Avatar.Disable {\n    animation-fill-mode: forwards;\n    animation: popOut 0.2s;\n    -webkit-animation: popOut 0.2s;\n    -moz-animation: popOut 0.2s;\n    -ms-animation: popOut 0.2s; }\n  .Avatars__Avatar:hover {\n    cursor: pointer; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Avatars__Wrapper {\n  display: flex;\n  flex-direction: column;\n  margin-top: 80px; }\n  .Avatars__Wrapper.mainContent {\n    align-items: center; }\n  .Avatars__Wrapper.sideContent {\n    align-items: flex-start; }\n\n.Avatars__Container {\n  display: flex;\n  justify-content: space-around; }\n  .Avatars__Container.mainContent {\n    flex-wrap: wrap;\n    max-width: 700px;\n    margin: 0 20px; }\n  .Avatars__Container.sideContent {\n    flex-direction: column; }\n\n.Avatars__Avatar {\n  background-size: 100%;\n  margin: 10px; }\n  .Avatars__Avatar.mainContent {\n    width: 150px;\n    height: 150px; }\n  .Avatars__Avatar.sideContent {\n    width: 60px;\n    height: 60px; }\n    @media (min-width: 768px) {\n      .Avatars__Avatar.sideContent {\n        width: 90px;\n        height: 90px; } }\n  .Avatars__Avatar:nth-child(1) {\n    animation: popIn 0.3s 0s 1 normal forwards;\n    -webkit-animation: popIn 0.3s 0s 1 normal forwards;\n    -moz-animation: popIn 0.3s 0s 1 normal forwards;\n    -ms-animation: popIn 0.3s 0s 1 normal forwards; }\n  .Avatars__Avatar:nth-child(2) {\n    animation: popIn 0.6s 0s 1 normal forwards;\n    -webkit-animation: popIn 0.6s 0s 1 normal forwards;\n    -moz-animation: popIn 0.6s 0s 1 normal forwards;\n    -ms-animation: popIn 0.6s 0s 1 normal forwards; }\n  .Avatars__Avatar:nth-child(3) {\n    animation: popIn 0.9s 0s 1 normal forwards;\n    -webkit-animation: popIn 0.9s 0s 1 normal forwards;\n    -moz-animation: popIn 0.9s 0s 1 normal forwards;\n    -ms-animation: popIn 0.9s 0s 1 normal forwards; }\n  .Avatars__Avatar:nth-child(4) {\n    animation: popIn 1.2s 0s 1 normal forwards;\n    -webkit-animation: popIn 1.2s 0s 1 normal forwards;\n    -moz-animation: popIn 1.2s 0s 1 normal forwards;\n    -ms-animation: popIn 1.2s 0s 1 normal forwards; }\n  .Avatars__Avatar.Disable {\n    animation: popOut 0.2s 0s 1 normal forwards;\n    -webkit-animation: popOut 0.2s 0s 1 normal forwards;\n    -moz-animation: popOut 0.2s 0s 1 normal forwards;\n    -ms-animation: popOut 0.2s 0s 1 normal forwards; }\n  .Avatars__Avatar:hover {\n    cursor: pointer; }\n", ""]);
 	
 	// exports
 
@@ -22138,11 +22138,13 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
+	__webpack_require__(186);
+	
 	var _react = __webpack_require__(5);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _HaylieMasonry = __webpack_require__(186);
+	var _HaylieMasonry = __webpack_require__(188);
 	
 	var _HaylieMasonry2 = _interopRequireDefault(_HaylieMasonry);
 	
@@ -22172,7 +22174,7 @@
 	
 				return _react2.default.createElement(
 					'div',
-					{ className: 'Content__Wrapper' },
+					{ className: 'Content__Wrapper animate' },
 					_react2.default.createElement(_HaylieMasonry2.default, null)
 				);
 			}
@@ -22191,6 +22193,46 @@
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(187);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Content.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Content.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Content__Wrapper {\n  border-left: 1px solid #cccccc;\n  transform: translateX(100%); }\n  .Content__Wrapper.animate {\n    transition: all 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);\n    transform: translateX(0%); }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -22203,7 +22245,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Masonry = __webpack_require__(187);
+	var _Masonry = __webpack_require__(189);
 	
 	var _Masonry2 = _interopRequireDefault(_Masonry);
 	
@@ -22241,7 +22283,7 @@
 	exports.default = HaylieMasonry;
 
 /***/ },
-/* 187 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22252,21 +22294,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	__webpack_require__(188);
+	__webpack_require__(190);
 	
 	var _react = __webpack_require__(5);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactMasonryComponent = __webpack_require__(190);
+	var _reactMasonryComponent = __webpack_require__(192);
 	
 	var _reactMasonryComponent2 = _interopRequireDefault(_reactMasonryComponent);
 	
-	var _lodash = __webpack_require__(202);
+	var _lodash = __webpack_require__(204);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	var _Config = __webpack_require__(204);
+	var _Config = __webpack_require__(206);
 	
 	var _Config2 = _interopRequireDefault(_Config);
 	
@@ -22369,7 +22411,7 @@
 							key: index,
 							className: 'Masonry__Item',
 							src: 'http://res.cloudinary.com/' + _Config2.default.CLOUDINARY_NAME + '/image/upload/w_' + imageWidth + '/haylie-wu' + imageNum,
-							alt: 'pretty kitty'
+							alt: 'pretty haylie'
 						});
 					})
 				);
@@ -22394,13 +22436,13 @@
 	exports.default = Masonry;
 
 /***/ },
-/* 188 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(189);
+	var content = __webpack_require__(191);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -22420,7 +22462,7 @@
 	}
 
 /***/ },
-/* 189 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -22428,21 +22470,21 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n.Masonry__Container {\n  width: 320px; }\n  @media (min-width: 568px) {\n    .Masonry__Container {\n      width: 568px; } }\n  @media (min-width: 768px) {\n    .Masonry__Container {\n      width: 768px; } }\n  @media (min-width: 960px) {\n    .Masonry__Container {\n      width: 960px; } }\n  @media (min-width: 1200px) {\n    .Masonry__Container {\n      width: 1200px; } }\n\n.Masonry__Item {\n  margin: 5px; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Masonry__Container {\n  width: 320px; }\n  @media (min-width: 568px) {\n    .Masonry__Container {\n      width: 568px; } }\n  @media (min-width: 768px) {\n    .Masonry__Container {\n      width: 768px; } }\n  @media (min-width: 960px) {\n    .Masonry__Container {\n      width: 960px; } }\n  @media (min-width: 1200px) {\n    .Masonry__Container {\n      width: 1200px; } }\n\n.Masonry__Item {\n  margin: 5px; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 190 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isBrowser = typeof window !== 'undefined';
-	var Masonry = isBrowser ? window.Masonry || __webpack_require__(191) : null;
-	var imagesloaded = isBrowser ? __webpack_require__(198) : null;
-	var assign = __webpack_require__(199);
-	var debounce = __webpack_require__(200);
-	var omit = __webpack_require__(201);
+	var Masonry = isBrowser ? window.Masonry || __webpack_require__(193) : null;
+	var imagesloaded = isBrowser ? __webpack_require__(200) : null;
+	var assign = __webpack_require__(201);
+	var debounce = __webpack_require__(202);
+	var omit = __webpack_require__(203);
 	var React = __webpack_require__(5);
 	var refName = 'masonryContainer';
 	
@@ -22639,7 +22681,7 @@
 
 
 /***/ },
-/* 191 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22656,8 +22698,8 @@
 	  if ( true ) {
 	    // AMD
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(192),
-	        __webpack_require__(194)
+	        __webpack_require__(194),
+	        __webpack_require__(196)
 	      ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if ( typeof module == 'object' && module.exports ) {
 	    // CommonJS
@@ -22849,7 +22891,7 @@
 
 
 /***/ },
-/* 192 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22865,10 +22907,10 @@
 	  if ( true ) {
 	    // AMD - RequireJS
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(193),
-	        __webpack_require__(194),
 	        __webpack_require__(195),
-	        __webpack_require__(197)
+	        __webpack_require__(196),
+	        __webpack_require__(197),
+	        __webpack_require__(199)
 	      ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter, getSize, utils, Item ) {
 	        return factory( window, EvEmitter, getSize, utils, Item);
 	      }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -23792,7 +23834,7 @@
 
 
 /***/ },
-/* 193 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -23907,7 +23949,7 @@
 
 
 /***/ },
-/* 194 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24122,7 +24164,7 @@
 
 
 /***/ },
-/* 195 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -24139,7 +24181,7 @@
 	  if ( true ) {
 	    // AMD
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	      __webpack_require__(196)
+	      __webpack_require__(198)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( matchesSelector ) {
 	      return factory( window, matchesSelector );
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -24364,7 +24406,7 @@
 
 
 /***/ },
-/* 196 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -24423,7 +24465,7 @@
 
 
 /***/ },
-/* 197 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -24436,8 +24478,8 @@
 	  if ( true ) {
 	    // AMD - RequireJS
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(193),
-	        __webpack_require__(194)
+	        __webpack_require__(195),
+	        __webpack_require__(196)
 	      ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if ( typeof module == 'object' && module.exports ) {
 	    // CommonJS - Browserify, Webpack
@@ -24980,7 +25022,7 @@
 
 
 /***/ },
-/* 198 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24997,7 +25039,7 @@
 	  if ( true ) {
 	    // AMD
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	      __webpack_require__(193)
+	      __webpack_require__(195)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter ) {
 	      return factory( window, EvEmitter );
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -25356,7 +25398,7 @@
 
 
 /***/ },
-/* 199 */
+/* 201 */
 /***/ function(module, exports) {
 
 	/**
@@ -26073,7 +26115,7 @@
 
 
 /***/ },
-/* 200 */
+/* 202 */
 /***/ function(module, exports) {
 
 	/**
@@ -26470,7 +26512,7 @@
 
 
 /***/ },
-/* 201 */
+/* 203 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -28033,7 +28075,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 202 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -44645,10 +44687,10 @@
 	  }
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(203)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(205)(module)))
 
 /***/ },
-/* 203 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -44664,7 +44706,7 @@
 
 
 /***/ },
-/* 204 */
+/* 206 */
 /***/ function(module, exports) {
 
 	'use strict';

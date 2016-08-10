@@ -75,7 +75,7 @@ class Masonry extends Component {
 						key={index}
 						className="Masonry__Item"
 						src={'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_'+ imageWidth + '/haylie-wu' + imageNum}
-						alt="pretty kitty"
+						alt="pretty haylie"
 						/>
 				))}
 			</MasonryComponent>
