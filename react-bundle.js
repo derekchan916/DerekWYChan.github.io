@@ -22453,6 +22453,25 @@
 					this.setState({ imagesLoaded: true });
 				}
 			}
+		}, {
+			key: 'loadImages',
+			value: function loadImages(images) {
+				var _this5 = this;
+	
+				Promise.all(images.map(function (image) {
+					return new Promise(function (resolve, reject) {
+						var img = new Image();
+						img.onload = resolve;
+						img.onerror = resolve;
+						img.src = image;
+					});
+				})).then(function (_) {
+					_this5.setState({ imageLoaded: true });
+					setTimeout(function (_) {
+						return _this5.setState({ animationReady: true });
+					}, TRANSITION_ANIMATE_TIME);
+				});
+			}
 		}]);
 	
 		return Masonry;

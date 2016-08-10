@@ -91,6 +91,18 @@ class Masonry extends Component {
 			this.setState({imagesLoaded: true});
 		}
 	}
+
+	loadImages (images) {
+		Promise.all(images.map(image => new Promise(function (resolve, reject) {
+			var img = new Image();
+			img.onload = resolve;
+			img.onerror = resolve;
+			img.src = image;
+		}))).then(_ => {
+			this.setState({ imageLoaded: true });
+			setTimeout(_ => this.setState({ animationReady: true }), TRANSITION_ANIMATE_TIME);
+		});
+	}
 }
 
 export default Masonry;
