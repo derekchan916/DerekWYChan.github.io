@@ -20,6 +20,9 @@
 	&__Container {
 		display: flex;
 		justify-content: space-around;
+		
+		// Transform puts this container in its own rendering layer - Nick
+		transform: translateZ(0);
 
 		&.mainContent {
 			flex-wrap: wrap;
