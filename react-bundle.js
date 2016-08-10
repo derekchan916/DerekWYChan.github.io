@@ -22121,7 +22121,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Avatars__Wrapper {\n  display: flex;\n  flex-direction: column;\n  margin-top: 80px; }\n  .Avatars__Wrapper.mainContent {\n    align-items: center; }\n  .Avatars__Wrapper.sideContent {\n    align-items: flex-start; }\n\n.Avatars__Container {\n  display: flex;\n  justify-content: space-around; }\n  .Avatars__Container.mainContent {\n    flex-wrap: wrap;\n    max-width: 700px;\n    margin: 0 20px; }\n  .Avatars__Container.sideContent {\n    flex-direction: column; }\n\n.Avatars__Avatar {\n  background-size: 100%;\n  margin: 10px; }\n  .Avatars__Avatar.mainContent {\n    width: 150px;\n    height: 150px; }\n  .Avatars__Avatar.sideContent {\n    width: 60px;\n    height: 60px; }\n    @media (min-width: 768px) {\n      .Avatars__Avatar.sideContent {\n        width: 90px;\n        height: 90px; } }\n  .Avatars__Avatar:nth-child(1) {\n    animation: popIn 0.3s 0s 1 normal forwards;\n    -webkit-animation: popIn 0.3s 0s 1 normal forwards;\n    -moz-animation: popIn 0.3s 0s 1 normal forwards;\n    -ms-animation: popIn 0.3s 0s 1 normal forwards; }\n  .Avatars__Avatar:nth-child(2) {\n    animation: popIn 0.6s 0s 1 normal forwards;\n    -webkit-animation: popIn 0.6s 0s 1 normal forwards;\n    -moz-animation: popIn 0.6s 0s 1 normal forwards;\n    -ms-animation: popIn 0.6s 0s 1 normal forwards; }\n  .Avatars__Avatar:nth-child(3) {\n    animation: popIn 0.9s 0s 1 normal forwards;\n    -webkit-animation: popIn 0.9s 0s 1 normal forwards;\n    -moz-animation: popIn 0.9s 0s 1 normal forwards;\n    -ms-animation: popIn 0.9s 0s 1 normal forwards; }\n  .Avatars__Avatar:nth-child(4) {\n    animation: popIn 1.2s 0s 1 normal forwards;\n    -webkit-animation: popIn 1.2s 0s 1 normal forwards;\n    -moz-animation: popIn 1.2s 0s 1 normal forwards;\n    -ms-animation: popIn 1.2s 0s 1 normal forwards; }\n  .Avatars__Avatar.Disable {\n    animation: popOut 0.2s 0s 1 normal forwards;\n    -webkit-animation: popOut 0.2s 0s 1 normal forwards;\n    -moz-animation: popOut 0.2s 0s 1 normal forwards;\n    -ms-animation: popOut 0.2s 0s 1 normal forwards; }\n  .Avatars__Avatar:hover {\n    cursor: pointer; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Avatars__Wrapper {\n  display: flex;\n  flex-direction: column;\n  margin-top: 80px; }\n  .Avatars__Wrapper.mainContent {\n    align-items: center; }\n  .Avatars__Wrapper.sideContent {\n    align-items: flex-start; }\n\n.Avatars__Container {\n  display: flex;\n  justify-content: space-around; }\n  .Avatars__Container.mainContent {\n    flex-wrap: wrap;\n    max-width: 700px;\n    margin: 0 20px; }\n  .Avatars__Container.sideContent {\n    flex-direction: column; }\n\n.Avatars__Avatar {\n  background-size: 100%;\n  margin: 10px; }\n  .Avatars__Avatar.mainContent {\n    width: 150px;\n    height: 150px; }\n  .Avatars__Avatar.sideContent {\n    width: 60px;\n    height: 60px; }\n    @media (min-width: 768px) {\n      .Avatars__Avatar.sideContent {\n        width: 90px;\n        height: 90px; } }\n  .Avatars__Avatar:nth-child(1) {\n    animation: popIn 0.3s 0s 1 ease both;\n    -webkit-animation: popIn 0.3s 0s 1 ease both;\n    -moz-animation: popIn 0.3s 0s 1 ease both;\n    -ms-animation: popIn 0.3s 0s 1 ease both; }\n  .Avatars__Avatar:nth-child(2) {\n    animation: popIn 0.6s 0s 1 ease both;\n    -webkit-animation: popIn 0.6s 0s 1 ease both;\n    -moz-animation: popIn 0.6s 0s 1 ease both;\n    -ms-animation: popIn 0.6s 0s 1 ease both; }\n  .Avatars__Avatar:nth-child(3) {\n    animation: popIn 0.9s 0s 1 ease both;\n    -webkit-animation: popIn 0.9s 0s 1 ease both;\n    -moz-animation: popIn 0.9s 0s 1 ease both;\n    -ms-animation: popIn 0.9s 0s 1 ease both; }\n  .Avatars__Avatar:nth-child(4) {\n    animation: popIn 1.2s 0s 1 ease both;\n    -webkit-animation: popIn 1.2s 0s 1 ease both;\n    -moz-animation: popIn 1.2s 0s 1 ease both;\n    -ms-animation: popIn 1.2s 0s 1 ease both; }\n  .Avatars__Avatar.Disable {\n    animation: popOut 0.2s 0s 1 ease both;\n    -webkit-animation: popOut 0.2s 0s 1 ease both;\n    -moz-animation: popOut 0.2s 0s 1 ease both;\n    -ms-animation: popOut 0.2s 0s 1 ease both; }\n  .Avatars__Avatar:hover {\n    cursor: pointer; }\n", ""]);
 	
 	// exports
 
@@ -22159,24 +22159,40 @@
 	var Content = function (_Component) {
 		_inherits(Content, _Component);
 	
-		function Content() {
+		function Content(props) {
 			_classCallCheck(this, Content);
 	
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Content).apply(this, arguments));
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Content).call(this, props));
+	
+			_this.state = {
+				contentLoaded: false
+			};
+			return _this;
 		}
 	
 		_createClass(Content, [{
 			key: 'render',
 			value: function render() {
+				var _this2 = this;
+	
+				var viewStyle = this.state.contentLoaded ? 'animate' : '';
 				if (this.props.currentPage === 'home') {
 					return null;
 				}
 	
 				return _react2.default.createElement(
 					'div',
-					{ className: 'Content__Wrapper animate' },
-					_react2.default.createElement(_HaylieMasonry2.default, null)
+					{ className: "Content__Wrapper " + viewStyle },
+					_react2.default.createElement(_HaylieMasonry2.default, {
+						contentHasLoaded: function contentHasLoaded() {
+							return _this2.contentHasLoaded();
+						} })
 				);
+			}
+		}, {
+			key: 'contentHasLoaded',
+			value: function contentHasLoaded() {
+				this.setState({ contentLoaded: true });
 			}
 		}]);
 	
@@ -22224,7 +22240,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Content__Wrapper {\n  border-left: 1px solid #cccccc;\n  transform: translateX(100%); }\n  .Content__Wrapper.animate {\n    transition: all 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);\n    transform: translateX(0%); }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Content__Wrapper {\n  border-left: 1px solid #cccccc; }\n  .Content__Wrapper.animate {\n    animation: fadeIn 1s 0.5s 1 ease both;\n    -webkit-animation: fadeIn 1s 0.5s 1 ease both;\n    -moz-animation: fadeIn 1s 0.5s 1 ease both;\n    -ms-animation: fadeIn 1s 0.5s 1 ease both; }\n", ""]);
 	
 	// exports
 
@@ -22260,13 +22276,18 @@
 	var HaylieMasonry = function (_Component) {
 		_inherits(HaylieMasonry, _Component);
 	
-		function HaylieMasonry() {
+		function HaylieMasonry(props) {
 			_classCallCheck(this, HaylieMasonry);
 	
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(HaylieMasonry).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(HaylieMasonry).call(this, props));
 		}
 	
 		_createClass(HaylieMasonry, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.props.contentHasLoaded();
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
@@ -22279,6 +22300,10 @@
 	
 		return HaylieMasonry;
 	}(_react.Component);
+	
+	HaylieMasonry.propTypes = {
+		contentHasLoaded: _react.PropTypes.func
+	};
 	
 	exports.default = HaylieMasonry;
 

@@ -23,7 +23,7 @@ $site-width-desktop-small: 960px; // tablets and older laptops
 $site-width-desktop-medium: 1200px;
 
 // Keyframes animations
-@mixin animate ($name: popIn, $duration: 1s, $delay: 0s, $iterations: 1, $direction: normal, $mode: forwards) {
+@mixin animate ($name: popIn, $duration: 1s, $delay: 0s, $iterations: 1, $direction: ease, $mode: both) {
 	animation: $name $duration $delay $iterations $direction $mode;
 	-webkit-animation: $name $duration $delay $iterations $direction $mode;
 	-moz-animation: $name $duration $delay $iterations $direction $mode;

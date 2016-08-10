@@ -8,14 +8,27 @@ import React, {
 import HaylieMasonry from '../../Haylie/Components/HaylieMasonry';
 
 class Content extends Component {
+	constructor (props) {
+		super(props);
+		this.state = {
+			contentLoaded: false
+		};
+	}
+
 	render () {
+		const viewStyle = this.state.contentLoaded ? 'animate' : '';
 		if (this.props.currentPage === 'home') {return null;}
 
 		return (
-			<div className="Content__Wrapper animate">
-				<HaylieMasonry />
+			<div className={"Content__Wrapper " + viewStyle}>
+				<HaylieMasonry
+					contentHasLoaded={() => this.contentHasLoaded()}/>
 			</div>
 		)
+	}
+
+	contentHasLoaded () {
+		this.setState({contentLoaded: true})
 	}
 }
 
