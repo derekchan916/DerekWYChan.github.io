@@ -42,6 +42,7 @@ class Masonry extends Component {
 	render () {
 		const windowWidth = this.state.windowWidth;
 		const displayStyle = !this.state.imagesLoaded ? 'none' : 'inline-block';
+		// const link = 'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_'+ imageWidth + '/haylie-wu' + imageNum
 		var imageWidth;
 
 		switch (true) {
@@ -60,7 +61,6 @@ class Masonry extends Component {
 			default:
 				imageWidth = 390;
 		}
-
         return (
 			<MasonryComponent
 				className={"Masonry__Container"}
@@ -74,7 +74,7 @@ class Masonry extends Component {
 					<img
 						key={index}
 						className="Masonry__Item"
-						src={'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_'+ imageWidth + '/haylie-wu' + imageNum}
+						src={'http://placehold.it/'+imageWidth+'x150'}
 						alt="pretty haylie"
 						/>
 				))}
