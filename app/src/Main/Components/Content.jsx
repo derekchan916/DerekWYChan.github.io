@@ -5,7 +5,7 @@ import React, {
 	Component,
 	PropTypes
 } from 'react';
-import HaylieMasonry from '../../Haylie/Components/HaylieMasonry';
+import HaylieMain from '../../Haylie/Components/HaylieMain';
 
 class Content extends Component {
 	constructor (props) {
@@ -21,7 +21,7 @@ class Content extends Component {
 
 		return (
 			<div className={"Content__Wrapper " + viewStyle}>
-				<HaylieMasonry
+				<HaylieMain
 					contentHasLoaded={() => this.contentHasLoaded()}/>
 			</div>
 		)
