@@ -22347,8 +22347,6 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Component from https://github.com/eiriklv/react-masonry-component
 	
 	
-	var ImageCount = 24;
-	
 	var Masonry = function (_Component) {
 		_inherits(Masonry, _Component);
 	
@@ -22358,11 +22356,10 @@
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Masonry).call(this, props));
 	
 			_this.state = {
-				// imageNums: [],
+				data: null,
+				dataLoading: true,
+				dataError: null,
 				imagesArray: null,
-				dataLoading: false,
-				error: null,
-				imagesRendered: false,
 				windowWidth: window.innerWidth
 			};
 			return _this;
@@ -22371,13 +22368,7 @@
 		_createClass(Masonry, [{
 			key: 'componentWillMount',
 			value: function componentWillMount() {
-				// var arr = [];
-				//
-				// for (var i = 1; i <= ImageCount; i++) {
-				// 	arr.push(i);
-				// }
-				this.loadImages();
-				// this.setState({imageNums: _.shuffle(arr)});
+				this.fetchImages();
 			}
 		}, {
 			key: 'componentDidMount',
@@ -22398,11 +22389,12 @@
 				});
 			}
 		}, {
-			key: 'componentWillReceiveProps',
-			value: function componentWillReceiveProps(nextProps) {
-				console.log(this.state, nextProps);
-				if (!this.state.dataLoading && this.state.imagesArray) {
-					console.log('HOOOOORAY');
+			key: 'componentWillUpdate',
+			value: function componentWillUpdate(nextProps, nextState) {
+				var localImageArray;
+	
+				if (!nextState.dataLoading && !nextState.imagesArray) {
+					this.formatData(nextState.data);
 				}
 			}
 		}, {
@@ -22411,10 +22403,13 @@
 				var _this4 = this;
 	
 				var windowWidth = this.state.windowWidth;
-				var displayStyle = !this.state.imagesLoaded ? 'none' : 'inline-block';
-				// const link = 'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_'+ imageWidth + '/haylie-wu' + imageNum
-				// const getImagesbyTagUrl = 'http://res.cloudinary.com/dqqac1ydh/image/list/haylie.json';
+				var displayStyle = !this.state.imagesArray ? 'none' : 'inline-block';
+				var placeHolderUrl = 'http://placehold.it/' + imageWidth + 'x150';
 				var imageWidth;
+	
+				if (!this.state.imagesArray) {
+					return null;
+				}
 	
 				switch (true) {
 					case windowWidth < 568:
@@ -22432,55 +22427,49 @@
 					default:
 						imageWidth = 390;
 				}
-				return _react2.default.createElement(_reactMasonryComponent2.default, {
-					className: "Masonry__Container",
-					options: { transitionDuration: 0 },
-					disableImagesLoaded: false,
-					updateOnEachImageLoad: false,
-					style: { display: displayStyle },
-					onImagesLoaded: function onImagesLoaded() {
-						return _this4.handleImagesLoaded();
-					}
-				});
-				// {this.state.imageNums.map((imageNum, index) => (
-				// 	<img
-				// 		key={index}
-				// 		className="Masonry__Item"
-				// 		src={'http://placehold.it/'+imageWidth+'x150'}
-				// 		alt="pretty haylie"
-				// 		/>
-				// ))}
+	
+				// src={'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_' + imageWidth + '/' + imageUrl}
+				return _react2.default.createElement(
+					_reactMasonryComponent2.default,
+					{
+						className: "Masonry__Container",
+						options: { transitionDuration: 0 },
+						disableImagesLoaded: false,
+						updateOnEachImageLoad: false,
+						style: { display: displayStyle },
+						onImagesLoaded: function onImagesLoaded() {
+							return _this4.handleImagesLoaded();
+						}
+					},
+					this.state.imagesArray.map(function (imageUrl, index) {
+						return _react2.default.createElement('img', {
+							key: index,
+							className: 'Masonry__Item',
+							alt: 'pretty picture',
+							src: 'http://placehold.it/' + imageWidth + 'x150'
+						});
+					})
+				);
 			}
 		}, {
-			key: 'loadImages',
-			value: function loadImages() {
+			key: 'fetchImages',
+			value: function fetchImages() {
 				var _this5 = this;
 	
 				fetch('http://res.cloudinary.com/' + _Config2.default.CLOUDINARY_NAME + this.props.searchUrl).then(function (response) {
 					return response.json();
 				}).then(function (data) {
-					_this5.formatData(data);
+					_this5.setState({
+						data: data,
+						dataLoading: false
+					});
 				}).catch(function (error) {
 					console.warn(error);
 					_this5.setState({
-						error: error
-	
+						dataError: error
 					});
 				});
 			}
-	
-			// loadImages (images) {
-			// 	Promise.all(images.map(image => new Promise(function (resolve, reject) {
-			// 		var img = new Image();
-			// 		img.onload = resolve;
-			// 		img.onerror = resolve;
-			// 		img.src = image;
-			// 	}))).then(_ => {
-			// 		this.setState({ imagesRendered: true });
-			// 		setTimeout(_ => this.setState({ animationReady: true }), TRANSITION_ANIMATE_TIME);
-			// 	});
-			// }
-	
 		}, {
 			key: 'handleResize',
 			value: function handleResize(e) {
@@ -22497,10 +22486,9 @@
 			key: 'formatData',
 			value: function formatData(data) {
 				this.setState({
-					imageArray: data.resources.map(function (imgObj) {
+					imagesArray: _lodash2.default.shuffle(data.resources.map(function (imgObj) {
 						return imgObj.public_id;
-					}),
-					dataLoading: false
+					})).slice(0, 5)
 				});
 			}
 		}]);

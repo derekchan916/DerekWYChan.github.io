@@ -10,29 +10,20 @@ import MasonryComponent from 'react-masonry-component'; // Component from https:
 import _ from 'lodash';
 import Config from '../../Main/Config';
 
-const ImageCount = 24;
-
 class Masonry extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			// imageNums: [],
+			data: null,
+			dataLoading: true,
+			dataError: null,
 			imagesArray: null,
-			dataLoading: false,
-			error: null,
-			imagesRendered: false,
 			windowWidth: window.innerWidth,
 		}
 	}
 
 	componentWillMount () {
-		// var arr = [];
-		//
-		// for (var i = 1; i <= ImageCount; i++) {
-		// 	arr.push(i);
-		// }
-		this.loadImages();
-		// this.setState({imageNums: _.shuffle(arr)});
+		this.fetchImages();
 	}
 
 	componentDidMount () {
@@ -43,19 +34,21 @@ class Masonry extends Component {
 		window.removeEventListener('resize', () => this.handleResize());
 	}
 
-	componentWillReceiveProps (nextProps) {
-		console.log(this.state, nextProps)
-		if (!this.state.dataLoading && this.state.imagesArray) {
-			console.log('HOOOOORAY')
+	componentWillUpdate (nextProps, nextState) {
+		var localImageArray;
+
+		if (!nextState.dataLoading && !nextState.imagesArray) {
+			this.formatData(nextState.data);
 		}
 	}
 
 	render () {
 		const windowWidth = this.state.windowWidth;
-		const displayStyle = !this.state.imagesLoaded ? 'none' : 'inline-block';
-		// const link = 'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_'+ imageWidth + '/haylie-wu' + imageNum
-		// const getImagesbyTagUrl = 'http://res.cloudinary.com/dqqac1ydh/image/list/haylie.json';
+		const displayStyle = !this.state.imagesArray ? 'none' : 'inline-block';
+		const placeHolderUrl = 'http://placehold.it/'+imageWidth+'x150';
 		var imageWidth;
+
+		if (!this.state.imagesArray) {return null;}
 
 		switch (true) {
 			case (windowWidth < 568):
@@ -73,6 +66,8 @@ class Masonry extends Component {
 			default:
 				imageWidth = 390;
 		}
+
+		// src={'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_' + imageWidth + '/' + imageUrl}
         return (
 			<MasonryComponent
 				className={"Masonry__Container"}
@@ -82,44 +77,34 @@ class Masonry extends Component {
 				style={{display: displayStyle}}
 				onImagesLoaded={() => this.handleImagesLoaded()}
 				>
+				{this.state.imagesArray.map((imageUrl, index) => (
+					<img
+						key={index}
+						className="Masonry__Item"
+						alt="pretty picture"
+						src={'http://placehold.it/'+imageWidth+'x150'}
+						/>
+				))}
 			</MasonryComponent>
         );
-		// {this.state.imageNums.map((imageNum, index) => (
-		// 	<img
-		// 		key={index}
-		// 		className="Masonry__Item"
-		// 		src={'http://placehold.it/'+imageWidth+'x150'}
-		// 		alt="pretty haylie"
-		// 		/>
-		// ))}
     }
 
-	loadImages () {
+	fetchImages () {
 		fetch('http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + this.props.searchUrl)
 		.then((response) => response.json())
 		.then((data) => {
-			this.formatData(data);
+			this.setState({
+				data: data,
+				dataLoading: false,
+			})
 		})
 		.catch((error) => {
 			console.warn(error);
 			this.setState({
-				error: error,
-
+				dataError: error,
 			});
 		})
 	}
-
-	// loadImages (images) {
-	// 	Promise.all(images.map(image => new Promise(function (resolve, reject) {
-	// 		var img = new Image();
-	// 		img.onload = resolve;
-	// 		img.onerror = resolve;
-	// 		img.src = image;
-	// 	}))).then(_ => {
-	// 		this.setState({ imagesRendered: true });
-	// 		setTimeout(_ => this.setState({ animationReady: true }), TRANSITION_ANIMATE_TIME);
-	// 	});
-	// }
 
 	handleResize (e) {
 		this.setState({windowWidth: window.innerWidth});
@@ -133,8 +118,7 @@ class Masonry extends Component {
 
 	formatData (data) {
 		this.setState({
-			imageArray: data.resources.map((imgObj) => imgObj.public_id),
-			dataLoading: false,
+			imagesArray: _.shuffle(data.resources.map((imgObj) => imgObj.public_id)).slice(0, 5)
 		});
 	}
 }
