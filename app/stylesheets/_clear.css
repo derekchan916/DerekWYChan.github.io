@@ -14,6 +14,10 @@ span, nav, p, img {
 	background: transparent;
 }
 
+html, body {
+	height: 100%;
+}
+
 p {
 	display: inline;
 }
@@ -24,4 +28,8 @@ ul {
 
 li {
 	list-style: none;
+}
+
+#main {
+	height: 100%;
 }
