@@ -22,7 +22,8 @@ class Content extends Component {
 		return (
 			<div className={"Content__Wrapper " + viewStyle}>
 				<HaylieMain
-					contentHasLoaded={() => this.contentHasLoaded()}/>
+					contentHasLoaded={() => this.contentHasLoaded()}
+					currentPage={this.props.currentPage}/>
 			</div>
 		)
 	}

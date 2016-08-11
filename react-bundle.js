@@ -22186,7 +22186,8 @@
 					_react2.default.createElement(_HaylieMain2.default, {
 						contentHasLoaded: function contentHasLoaded() {
 							return _this2.contentHasLoaded();
-						} })
+						},
+						currentPage: this.props.currentPage })
 				);
 			}
 		}, {
@@ -44827,6 +44828,10 @@
 		_createClass(HaylieMain, [{
 			key: 'render',
 			value: function render() {
+				if (this.props.currentPage !== 'haylie') {
+					return null;
+				}
+	
 				return _react2.default.createElement(
 					'div',
 					null,
@@ -44840,7 +44845,8 @@
 	}(_react.Component);
 	
 	HaylieMain.propTypes = {
-		contentHasLoaded: _react.PropTypes.func
+		contentHasLoaded: _react.PropTypes.func,
+		currentPage: _react.PropTypes.string
 	};
 	
 	exports.default = HaylieMain;

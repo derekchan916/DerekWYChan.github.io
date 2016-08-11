@@ -12,6 +12,8 @@ class HaylieMain extends  Component {
 	}
 
 	render () {
+		if (this.props.currentPage !== 'haylie') {return null;}
+
 		return (
 			<div>
 				<HaylieMasonry
@@ -23,6 +25,7 @@ class HaylieMain extends  Component {
 
 HaylieMain.propTypes = {
 	contentHasLoaded: PropTypes.func,
+	currentPage : PropTypes.string,
 }
 
 export default HaylieMain;
