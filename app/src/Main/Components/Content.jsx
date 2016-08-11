@@ -6,6 +6,7 @@ import React, {
 	PropTypes
 } from 'react';
 import HaylieMain from '../../Haylie/Components/HaylieMain';
+import FloraFrankieMain from '../../FloraFrankie/Components/FloraFrankieMain';
 
 class Content extends Component {
 	constructor (props) {
@@ -22,6 +23,9 @@ class Content extends Component {
 		return (
 			<div className={"Content__Wrapper " + viewStyle}>
 				<HaylieMain
+					contentHasLoaded={() => this.contentHasLoaded()}
+					currentPage={this.props.currentPage}/>
+				<FloraFrankieMain
 					contentHasLoaded={() => this.contentHasLoaded()}
 					currentPage={this.props.currentPage}/>
 			</div>

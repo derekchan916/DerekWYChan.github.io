@@ -14,7 +14,7 @@ const AVATARLIST = [
 	},
 	{
 		name: 'Flora',
-		value: 'flora',
+		value: 'floraFrankie',
 		url: 'app/images/flora-avatar.png'
 	},
 	{

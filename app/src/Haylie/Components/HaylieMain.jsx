@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 import HaylieMasonry from './HaylieMasonry';
 
-class HaylieMain extends  Component {
+class HaylieMain extends Component {
 	constructor (props) {
 		super(props);
 	}
