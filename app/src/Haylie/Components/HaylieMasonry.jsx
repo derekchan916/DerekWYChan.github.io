@@ -18,7 +18,8 @@ class HaylieMasonry extends  Component {
 	render () {
 		return (
 			<div>
-				<Masonry />
+				<Masonry
+					searchUrl={'/image/list/haylie.json'}/>
 			</div>
 		)
 	}

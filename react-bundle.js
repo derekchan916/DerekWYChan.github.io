@@ -22293,7 +22293,8 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_Masonry2.default, null)
+					_react2.default.createElement(_Masonry2.default, {
+						searchUrl: '/image/list/haylie.json' })
 				);
 			}
 		}]);
@@ -22357,8 +22358,11 @@
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Masonry).call(this, props));
 	
 			_this.state = {
-				imageNums: [],
-				imagesLoaded: false,
+				// imageNums: [],
+				imagesArray: null,
+				dataLoading: false,
+				error: null,
+				imagesRendered: false,
 				windowWidth: window.innerWidth
 			};
 			return _this;
@@ -22367,13 +22371,13 @@
 		_createClass(Masonry, [{
 			key: 'componentWillMount',
 			value: function componentWillMount() {
-				var arr = [];
-	
-				for (var i = 1; i <= ImageCount; i++) {
-					arr.push(i);
-				}
-	
-				this.setState({ imageNums: _lodash2.default.shuffle(arr) });
+				// var arr = [];
+				//
+				// for (var i = 1; i <= ImageCount; i++) {
+				// 	arr.push(i);
+				// }
+				this.loadImages();
+				// this.setState({imageNums: _.shuffle(arr)});
 			}
 		}, {
 			key: 'componentDidMount',
@@ -22394,6 +22398,14 @@
 				});
 			}
 		}, {
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps(nextProps) {
+				console.log(this.state, nextProps);
+				if (!this.state.dataLoading && this.state.imagesArray) {
+					console.log('HOOOOORAY');
+				}
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				var _this4 = this;
@@ -22401,6 +22413,7 @@
 				var windowWidth = this.state.windowWidth;
 				var displayStyle = !this.state.imagesLoaded ? 'none' : 'inline-block';
 				// const link = 'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_'+ imageWidth + '/haylie-wu' + imageNum
+				// const getImagesbyTagUrl = 'http://res.cloudinary.com/dqqac1ydh/image/list/haylie.json';
 				var imageWidth;
 	
 				switch (true) {
@@ -22419,28 +22432,55 @@
 					default:
 						imageWidth = 390;
 				}
-				return _react2.default.createElement(
-					_reactMasonryComponent2.default,
-					{
-						className: "Masonry__Container",
-						options: { transitionDuration: 0 },
-						disableImagesLoaded: false,
-						updateOnEachImageLoad: false,
-						style: { display: displayStyle },
-						onImagesLoaded: function onImagesLoaded() {
-							return _this4.handleImagesLoaded();
-						}
-					},
-					this.state.imageNums.map(function (imageNum, index) {
-						return _react2.default.createElement('img', {
-							key: index,
-							className: 'Masonry__Item',
-							src: 'http://placehold.it/' + imageWidth + 'x150',
-							alt: 'pretty haylie'
-						});
-					})
-				);
+				return _react2.default.createElement(_reactMasonryComponent2.default, {
+					className: "Masonry__Container",
+					options: { transitionDuration: 0 },
+					disableImagesLoaded: false,
+					updateOnEachImageLoad: false,
+					style: { display: displayStyle },
+					onImagesLoaded: function onImagesLoaded() {
+						return _this4.handleImagesLoaded();
+					}
+				});
+				// {this.state.imageNums.map((imageNum, index) => (
+				// 	<img
+				// 		key={index}
+				// 		className="Masonry__Item"
+				// 		src={'http://placehold.it/'+imageWidth+'x150'}
+				// 		alt="pretty haylie"
+				// 		/>
+				// ))}
 			}
+		}, {
+			key: 'loadImages',
+			value: function loadImages() {
+				var _this5 = this;
+	
+				fetch('http://res.cloudinary.com/' + _Config2.default.CLOUDINARY_NAME + this.props.searchUrl).then(function (response) {
+					return response.json();
+				}).then(function (data) {
+					_this5.formatData(data);
+				}).catch(function (error) {
+					console.warn(error);
+					_this5.setState({
+						error: error
+	
+					});
+				});
+			}
+	
+			// loadImages (images) {
+			// 	Promise.all(images.map(image => new Promise(function (resolve, reject) {
+			// 		var img = new Image();
+			// 		img.onload = resolve;
+			// 		img.onerror = resolve;
+			// 		img.src = image;
+			// 	}))).then(_ => {
+			// 		this.setState({ imagesRendered: true });
+			// 		setTimeout(_ => this.setState({ animationReady: true }), TRANSITION_ANIMATE_TIME);
+			// 	});
+			// }
+	
 		}, {
 			key: 'handleResize',
 			value: function handleResize(e) {
@@ -22454,28 +22494,23 @@
 				}
 			}
 		}, {
-			key: 'loadImages',
-			value: function loadImages(images) {
-				var _this5 = this;
-	
-				Promise.all(images.map(function (image) {
-					return new Promise(function (resolve, reject) {
-						var img = new Image();
-						img.onload = resolve;
-						img.onerror = resolve;
-						img.src = image;
-					});
-				})).then(function (_) {
-					_this5.setState({ imageLoaded: true });
-					setTimeout(function (_) {
-						return _this5.setState({ animationReady: true });
-					}, TRANSITION_ANIMATE_TIME);
+			key: 'formatData',
+			value: function formatData(data) {
+				this.setState({
+					imageArray: data.resources.map(function (imgObj) {
+						return imgObj.public_id;
+					}),
+					dataLoading: false
 				});
 			}
 		}]);
 	
 		return Masonry;
 	}(_react.Component);
+	
+	Masonry.propTypes = {
+		searchUrl: _react.PropTypes.string
+	};
 	
 	exports.default = Masonry;
 
