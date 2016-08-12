@@ -6,7 +6,12 @@
 	height: 100%;
 
 	h1 {
-		display: inline;
 		font-size: $font-size-h1;
+	}
+
+	h2 {
+		font-size: $font-size-h2;
+		font-weight: bold;
+		margin-bottom: $gutter;
 	}
 }

@@ -132,7 +132,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 700;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Bold.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 500;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Regular.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 300;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Light.ttf\") format(\"truetype\"); }\n\n.Styleguide {\n  font-family: Comfortaa;\n  height: 100%; }\n  .Styleguide h1 {\n    display: inline;\n    font-size: 22px; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 700;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Bold.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 500;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Regular.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 300;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Light.ttf\") format(\"truetype\"); }\n\n.Styleguide {\n  font-family: Comfortaa;\n  height: 100%; }\n  .Styleguide h1 {\n    font-size: 22px; }\n  .Styleguide h2 {\n    font-size: 20px;\n    font-weight: bold;\n    margin-bottom: 10px; }\n", ""]);
 	
 	// exports
 
@@ -44968,7 +44968,7 @@
 						{ className: 'Timeline__Container' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__Content' },
+							{ className: 'Timeline__PrimaryContent' },
 							_react2.default.createElement(
 								'h2',
 								null,
@@ -44982,9 +44982,13 @@
 						),
 						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
 						_react2.default.createElement(
-							'span',
-							{ className: 'Timeline__Date' },
-							'Jan 14'
+							'div',
+							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'Timeline__Date' },
+								'Jan 14'
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -44992,7 +44996,7 @@
 						{ className: 'Timeline__Container' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__Content' },
+							{ className: 'Timeline__PrimaryContent' },
 							_react2.default.createElement(
 								'h2',
 								null,
@@ -45006,9 +45010,13 @@
 						),
 						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
 						_react2.default.createElement(
-							'span',
-							{ className: 'Timeline__Date' },
-							'Jan 18'
+							'div',
+							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'Timeline__Date' },
+								'Jan 18'
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -45016,7 +45024,7 @@
 						{ className: 'Timeline__Container' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__Content' },
+							{ className: 'Timeline__PrimaryContent' },
 							_react2.default.createElement(
 								'h2',
 								null,
@@ -45030,9 +45038,13 @@
 						),
 						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
 						_react2.default.createElement(
-							'span',
-							{ className: 'Timeline__Date' },
-							'Jan 24'
+							'div',
+							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'Timeline__Date' },
+								'Jan 24'
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -45040,7 +45052,7 @@
 						{ className: 'Timeline__Container' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__Content' },
+							{ className: 'Timeline__PrimaryContent' },
 							_react2.default.createElement(
 								'h2',
 								null,
@@ -45054,9 +45066,13 @@
 						),
 						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
 						_react2.default.createElement(
-							'span',
-							{ className: 'Timeline__Date' },
-							'Feb 14'
+							'div',
+							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'Timeline__Date' },
+								'Feb 14'
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -45064,7 +45080,7 @@
 						{ className: 'Timeline__Container' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__Content' },
+							{ className: 'Timeline__PrimaryContent' },
 							_react2.default.createElement(
 								'h2',
 								null,
@@ -45078,9 +45094,13 @@
 						),
 						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
 						_react2.default.createElement(
-							'span',
-							{ className: 'Timeline__Date' },
-							'Feb 18'
+							'div',
+							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'Timeline__Date' },
+								'Feb 18'
+							)
 						)
 					),
 					_react2.default.createElement(
@@ -45088,7 +45108,7 @@
 						{ className: 'Timeline__Container' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__Content' },
+							{ className: 'Timeline__PrimaryContent' },
 							_react2.default.createElement(
 								'h2',
 								null,
@@ -45102,9 +45122,13 @@
 						),
 						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
 						_react2.default.createElement(
-							'span',
-							{ className: 'Timeline__Date' },
-							'Feb 26'
+							'div',
+							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'Timeline__Date' },
+								'Feb 26'
+							)
 						)
 					)
 				);
@@ -45153,7 +45177,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Timeline__Wrapper {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin: 40px 40px;\n  padding: 40px 0; }\n  .Timeline__Wrapper:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 50%;\n    height: 100%;\n    width: 5px;\n    background: #d7e4ed; }\n\n.Timeline__Container {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 20px; }\n  .Timeline__Container:last-child {\n    margin-bottom: 0; }\n\n.Timeline__Icon {\n  border: 1px solid black;\n  width: 10px;\n  height: 10px; }\n\n.Timeline__Content {\n  display: flex;\n  flex: 0 0 40%;\n  padding: 20px; }\n\n.Timeline__Date {\n  flex: 0 0 40%;\n  padding: 20px; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Timeline__Wrapper {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin: 40px 40px;\n  padding: 40px 0; }\n  .Timeline__Wrapper:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 50%;\n    height: 100%;\n    width: 5px;\n    background: #d7e4ed; }\n\n.Timeline__Container {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 20px; }\n  .Timeline__Container:last-child {\n    margin-bottom: 0; }\n  .Timeline__Container:nth-child(2n) {\n    flex-direction: row-reverse; }\n    .Timeline__Container:nth-child(2n) > .SecondaryContent {\n      justify-content: flex-end; }\n\n.Timeline__Icon {\n  border: 1px solid black;\n  width: 10px;\n  height: 10px; }\n\n.Timeline__PrimaryContent, .Timeline__SecondaryContent {\n  display: flex;\n  flex: 0 0 40%;\n  flex-direction: column;\n  padding: 20px; }\n", ""]);
 	
 	// exports
 
