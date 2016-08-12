@@ -18,10 +18,10 @@ class App extends Component {
 	}
 
 	render () {
-		const viewStyle = this.state.currentPage === 'home' ?  'HomeView' : 'ActiveView';
+		// const viewStyle = this.state.currentPage === 'home' ?  'HomeView' : 'ActiveView';
 
 		return (
-			<div className={"App__Wrapper " + viewStyle}>
+			<div className={"App__Wrapper"}>
 				<Avatars
 					currentPage={this.state.currentPage}
 					onAvatarClick={(value) => this.onAvatarClick(value)}/>

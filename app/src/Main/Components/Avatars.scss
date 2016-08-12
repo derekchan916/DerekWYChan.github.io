@@ -4,56 +4,28 @@
 
 	&__Wrapper {
 		display: flex;
+		align-items: center;
 		flex-direction: column;
-
 		margin-top: $gutter-extra-large*2;
-
-		&.mainContent {
-			align-items: center;
-		}
-
-		&.sideContent {
-			align-items: flex-start;
-		}
 	}
 
 	&__Container {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-around;
-		
+		max-width: 700px;
+		margin: 0 $gutter-large;
+
 		// Transform puts this container in its own rendering layer - Nick
 		transform: translateZ(0);
-
-		&.mainContent {
-			flex-wrap: wrap;
-			max-width: 700px;
-			margin: 0 $gutter-large;
-		}
-
-		&.sideContent {
-			flex-direction: column;
-		}
 	}
 
 
 	&__Avatar {
 		background-size: 100%;
 		margin: $gutter;
-
-		&.mainContent {
-			width: 150px;
-			height: 150px;
-		}
-
-		&.sideContent {
-			width: 60px;
-			height: 60px;
-
-			@media (min-width: $site-width-tablet) {
-				width: 90px;
-				height: 90px;
-			}
-		}
+		width: 150px;
+		height: 150px;
 
 		// We could create a setTimeout to change the state on each item class but this way is much faster.
 		&:nth-child(1) {

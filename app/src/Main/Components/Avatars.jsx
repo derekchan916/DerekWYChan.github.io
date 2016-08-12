@@ -33,22 +33,20 @@ class Avatars extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			sideView: false,
 			disable: false,
 		}
 	}
 
 	render () {
-		const viewStyle = this.state.sideView ? 'sideContent ' : 'mainContent ';
 		const viewDisable = this.state.disable ? 'Disable' : '';
 
 		return (
-			<div className={"Avatars__Wrapper " + viewStyle}>
-				<div className={"Avatars__Container " + viewStyle}>
+			<div className={"Avatars__Wrapper"}>
+				<div className={"Avatars__Container"}>
 					{AVATARLIST.map((avatar, index) => (
 						<div
 							key={index}
-							className={"Avatars__Avatar " + viewStyle + viewDisable}
+							className={"Avatars__Avatar" + viewDisable}
 							style={{backgroundImage:'url(' + avatar.url + ')'}}
 							onClick={() => this.onAvatarClick(avatar.value)}
 							>
@@ -61,14 +59,7 @@ class Avatars extends Component {
 
 	onAvatarClick (value) {
 		this.setState({disable: true});
-
-		setTimeout(() => {
-			this.props.onAvatarClick(value);
-			this.setState({
-				sideView: !this.state.sideView,
-				disable: false,
-			})
-		}, 100);
+		this.props.onAvatarClick(value);
 	}
 }
 

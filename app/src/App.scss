@@ -4,15 +4,6 @@
 
 	&__Wrapper {
 		display: flex;
-
-		&.HomeView {
-			flex-direction: column;
-		}
-
-		&.ActiveView {
-			flex-direction: row;
-			flex: 1;
-			height: 100%;
-		}
+		flex-direction: column;
 	}
 }
