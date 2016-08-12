@@ -12,8 +12,6 @@ class FloraFrankieMain extends Component {
 	}
 
 	render () {
-		if (this.props.currentPage !== 'floraFrankie') {return null;}
-
 		return (
 			<div>
 				<Timeline />

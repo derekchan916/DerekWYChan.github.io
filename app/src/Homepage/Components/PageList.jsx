@@ -1,12 +1,12 @@
 'use strict';
 
-import './Avatars.scss';
+import './PageList.scss';
 import React, {
 	Component,
 	PropTypes
 } from 'react';
 
-const AVATARLIST = [
+const AVATAR_LIST = [
 	{
 		name: 'Haylie',
 		value: 'haylie',
@@ -29,7 +29,7 @@ const AVATARLIST = [
 	},
 ]
 
-class Avatars extends Component {
+class PageList extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
@@ -41,12 +41,12 @@ class Avatars extends Component {
 		const viewDisable = this.state.disable ? 'Disable' : '';
 
 		return (
-			<div className={"Avatars__Wrapper"}>
-				<div className={"Avatars__Container"}>
-					{AVATARLIST.map((avatar, index) => (
+			<div className={"PageList__Wrapper"}>
+				<div className={"PageList__Container"}>
+					{AVATAR_LIST.map((avatar, index) => (
 						<div
 							key={index}
-							className={"Avatars__Avatar" + viewDisable}
+							className={"PageList__Avatar" + viewDisable}
 							style={{backgroundImage:'url(' + avatar.url + ')'}}
 							onClick={() => this.onAvatarClick(avatar.value)}
 							>
@@ -63,9 +63,9 @@ class Avatars extends Component {
 	}
 }
 
-Avatars.propTypes = {
+PageList.propTypes = {
 	// currentPage   : PropTypes.string,
 	// onAvatarClick : PropTypes.func,
 }
 
-export default Avatars;
+export default PageList;
