@@ -44968,166 +44968,170 @@
 						{ className: 'Timeline__Container' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__PrimaryContent' },
+							{ className: 'Timeline__Block' },
 							_react2.default.createElement(
-								'h2',
-								null,
-								'Title of section 1'
+								'div',
+								{ className: 'Timeline__PrimaryContent PrimaryContent' },
+								_react2.default.createElement(
+									'h2',
+									null,
+									'Title of section 1'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
+								)
 							),
+							_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
 							_react2.default.createElement(
-								'p',
-								null,
-								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
+								'div',
+								{ className: 'Timeline__SecondaryContent SecondaryContent' },
+								_react2.default.createElement(
+									'h2',
+									{ className: 'Timeline__Date' },
+									'Jan 14'
+								)
 							)
 						),
-						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							{ className: 'Timeline__Block' },
 							_react2.default.createElement(
-								'h2',
-								{ className: 'Timeline__Date' },
-								'Jan 14'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'Timeline__Container' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'Timeline__PrimaryContent' },
-							_react2.default.createElement(
-								'h2',
-								null,
-								'Title of section 2'
+								'div',
+								{ className: 'Timeline__PrimaryContent PrimaryContent' },
+								_react2.default.createElement(
+									'h2',
+									null,
+									'Title of section 2'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?'
+								)
 							),
+							_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
 							_react2.default.createElement(
-								'p',
-								null,
-								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?'
+								'div',
+								{ className: 'Timeline__SecondaryContent SecondaryContent' },
+								_react2.default.createElement(
+									'h2',
+									{ className: 'Timeline__Date' },
+									'Jan 18'
+								)
 							)
 						),
-						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							{ className: 'Timeline__Block' },
 							_react2.default.createElement(
-								'h2',
-								{ className: 'Timeline__Date' },
-								'Jan 18'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'Timeline__Container' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'Timeline__PrimaryContent' },
-							_react2.default.createElement(
-								'h2',
-								null,
-								'Title of section 3'
+								'div',
+								{ className: 'Timeline__PrimaryContent PrimaryContent' },
+								_react2.default.createElement(
+									'h2',
+									null,
+									'Title of section 3'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.'
+								)
 							),
+							_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
 							_react2.default.createElement(
-								'p',
-								null,
-								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.'
+								'div',
+								{ className: 'Timeline__SecondaryContent SecondaryContent' },
+								_react2.default.createElement(
+									'h2',
+									{ className: 'Timeline__Date' },
+									'Jan 24'
+								)
 							)
 						),
-						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							{ className: 'Timeline__Block' },
 							_react2.default.createElement(
-								'h2',
-								{ className: 'Timeline__Date' },
-								'Jan 24'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'Timeline__Container' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'Timeline__PrimaryContent' },
-							_react2.default.createElement(
-								'h2',
-								null,
-								'Title of section 4'
+								'div',
+								{ className: 'Timeline__PrimaryContent PrimaryContent' },
+								_react2.default.createElement(
+									'h2',
+									null,
+									'Title of section 4'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
+								)
 							),
+							_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
 							_react2.default.createElement(
-								'p',
-								null,
-								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
+								'div',
+								{ className: 'Timeline__SecondaryContent SecondaryContent' },
+								_react2.default.createElement(
+									'h2',
+									{ className: 'Timeline__Date' },
+									'Feb 14'
+								)
 							)
 						),
-						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							{ className: 'Timeline__Block' },
 							_react2.default.createElement(
-								'h2',
-								{ className: 'Timeline__Date' },
-								'Feb 14'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'Timeline__Container' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'Timeline__PrimaryContent' },
-							_react2.default.createElement(
-								'h2',
-								null,
-								'Title of section 5'
+								'div',
+								{ className: 'Timeline__PrimaryContent PrimaryContent' },
+								_react2.default.createElement(
+									'h2',
+									null,
+									'Title of section 5'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.'
+								)
 							),
+							_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
 							_react2.default.createElement(
-								'p',
-								null,
-								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.'
+								'div',
+								{ className: 'Timeline__SecondaryContent SecondaryContent' },
+								_react2.default.createElement(
+									'h2',
+									{ className: 'Timeline__Date' },
+									'Feb 18'
+								)
 							)
 						),
-						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__SecondaryContent SecondaryContent' },
+							{ className: 'Timeline__Block' },
 							_react2.default.createElement(
-								'h2',
-								{ className: 'Timeline__Date' },
-								'Feb 18'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'Timeline__Container' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'Timeline__PrimaryContent' },
-							_react2.default.createElement(
-								'h2',
-								null,
-								'Final Section'
+								'div',
+								{ className: 'Timeline__PrimaryContent PrimaryContent' },
+								_react2.default.createElement(
+									'h2',
+									null,
+									'Final Section'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'This is the content of the last section'
+								)
 							),
+							_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
 							_react2.default.createElement(
-								'p',
-								null,
-								'This is the content of the last section'
-							)
-						),
-						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
-						_react2.default.createElement(
-							'div',
-							{ className: 'Timeline__SecondaryContent SecondaryContent' },
-							_react2.default.createElement(
-								'h2',
-								{ className: 'Timeline__Date' },
-								'Feb 26'
+								'div',
+								{ className: 'Timeline__SecondaryContent SecondaryContent' },
+								_react2.default.createElement(
+									'h2',
+									{ className: 'Timeline__Date' },
+									'Feb 26'
+								)
 							)
 						)
 					)
@@ -45177,7 +45181,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Timeline__Wrapper {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin: 40px 40px;\n  padding: 40px 0; }\n  .Timeline__Wrapper:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 50%;\n    height: 100%;\n    width: 5px;\n    background: #d7e4ed; }\n\n.Timeline__Container {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 20px; }\n  .Timeline__Container:last-child {\n    margin-bottom: 0; }\n  .Timeline__Container:nth-child(2n) {\n    flex-direction: row-reverse; }\n    .Timeline__Container:nth-child(2n) > .SecondaryContent {\n      justify-content: flex-end; }\n\n.Timeline__Icon {\n  border: 1px solid black;\n  width: 10px;\n  height: 10px; }\n\n.Timeline__PrimaryContent, .Timeline__SecondaryContent {\n  display: flex;\n  flex: 0 0 40%;\n  flex-direction: column;\n  padding: 20px; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Timeline__Wrapper {\n  background-color: #e9f0f5; }\n\n.Timeline__Container {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin: 40px 40px;\n  padding: 40px 0;\n  background-color: #e9f0f5; }\n  .Timeline__Container:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 50%;\n    height: 100%;\n    width: 5px;\n    background: #d7e4ed; }\n\n.Timeline__Block {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 20px; }\n  .Timeline__Block:last-child {\n    margin-bottom: 0; }\n  .Timeline__Block:nth-child(2n) {\n    flex-direction: row-reverse; }\n    .Timeline__Block:nth-child(2n) > .PrimaryContent:before {\n      border-right: 7px solid white;\n      border-left: none;\n      right: 100%;\n      left: inherit; }\n    .Timeline__Block:nth-child(2n) > .SecondaryContent {\n      justify-content: flex-end; }\n\n.Timeline__Icon {\n  border: 1px solid black;\n  width: 10px;\n  height: 10px; }\n\n.Timeline__PrimaryContent, .Timeline__SecondaryContent {\n  display: flex;\n  flex: 0 0 40%;\n  flex-direction: column;\n  padding: 20px; }\n\n.Timeline__PrimaryContent {\n  border-radius: 5px;\n  background-color: white;\n  position: relative; }\n  .Timeline__PrimaryContent:before {\n    content: '';\n    position: absolute;\n    top: 24px;\n    left: 100%;\n    height: 0;\n    width: 0;\n    border: 7px solid transparent;\n    border-left: 7px solid white; }\n", ""]);
 	
 	// exports
 
