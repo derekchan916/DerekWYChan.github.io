@@ -44966,7 +44966,6 @@
 					_react2.default.createElement(
 						'div',
 						{ className: 'Timeline__Container' },
-						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'Timeline__Content' },
@@ -44979,18 +44978,18 @@
 								'p',
 								null,
 								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
-							),
-							_react2.default.createElement(
-								'span',
-								{ className: 'Timeline__Date' },
-								'Jan 14'
 							)
+						),
+						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
+						_react2.default.createElement(
+							'span',
+							{ className: 'Timeline__Date' },
+							'Jan 14'
 						)
 					),
 					_react2.default.createElement(
 						'div',
 						{ className: 'Timeline__Container' },
-						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'Timeline__Content' },
@@ -45003,18 +45002,18 @@
 								'p',
 								null,
 								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?'
-							),
-							_react2.default.createElement(
-								'span',
-								{ className: 'Timeline__Date' },
-								'Jan 18'
 							)
+						),
+						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
+						_react2.default.createElement(
+							'span',
+							{ className: 'Timeline__Date' },
+							'Jan 18'
 						)
 					),
 					_react2.default.createElement(
 						'div',
 						{ className: 'Timeline__Container' },
-						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'Timeline__Content' },
@@ -45027,18 +45026,18 @@
 								'p',
 								null,
 								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.'
-							),
-							_react2.default.createElement(
-								'span',
-								{ className: 'Timeline__Date' },
-								'Jan 24'
 							)
+						),
+						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
+						_react2.default.createElement(
+							'span',
+							{ className: 'Timeline__Date' },
+							'Jan 24'
 						)
 					),
 					_react2.default.createElement(
 						'div',
 						{ className: 'Timeline__Container' },
-						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'Timeline__Content' },
@@ -45051,18 +45050,18 @@
 								'p',
 								null,
 								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
-							),
-							_react2.default.createElement(
-								'span',
-								{ className: 'Timeline__Date' },
-								'Feb 14'
 							)
+						),
+						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
+						_react2.default.createElement(
+							'span',
+							{ className: 'Timeline__Date' },
+							'Feb 14'
 						)
 					),
 					_react2.default.createElement(
 						'div',
 						{ className: 'Timeline__Container' },
-						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'Timeline__Content' },
@@ -45075,18 +45074,18 @@
 								'p',
 								null,
 								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.'
-							),
-							_react2.default.createElement(
-								'span',
-								{ className: 'Timeline__Date' },
-								'Feb 18'
 							)
+						),
+						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
+						_react2.default.createElement(
+							'span',
+							{ className: 'Timeline__Date' },
+							'Feb 18'
 						)
 					),
 					_react2.default.createElement(
 						'div',
 						{ className: 'Timeline__Container' },
-						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'Timeline__Content' },
@@ -45099,12 +45098,13 @@
 								'p',
 								null,
 								'This is the content of the last section'
-							),
-							_react2.default.createElement(
-								'span',
-								{ className: 'Timeline__Date' },
-								'Feb 26'
 							)
+						),
+						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
+						_react2.default.createElement(
+							'span',
+							{ className: 'Timeline__Date' },
+							'Feb 26'
 						)
 					)
 				);
@@ -45153,7 +45153,7 @@
 	
 	
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Timeline__Wrapper {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin: 40px 40px;\n  padding: 40px 0; }\n  .Timeline__Wrapper:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 50%;\n    height: 100%;\n    width: 5px;\n    background: #d7e4ed; }\n\n.Timeline__Container {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 20px; }\n  .Timeline__Container:last-child {\n    margin-bottom: 0; }\n\n.Timeline__Icon {\n  border: 1px solid black;\n  width: 10px;\n  height: 10px; }\n\n.Timeline__Content {\n  display: flex;\n  flex: 0 0 40%;\n  padding: 20px; }\n\n.Timeline__Date {\n  flex: 0 0 40%;\n  padding: 20px; }\n", ""]);
 	
 	// exports
 

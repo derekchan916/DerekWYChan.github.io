@@ -1,0 +1,49 @@
+@import '../../../stylesheets/_main.scss';
+
+.Timeline {
+
+	&__Wrapper {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin: $gutter-extra-large $gutter-extra-large;
+		padding: $gutter-extra-large 0;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			height: 100%;
+			width: $gutter-small;
+			background: #d7e4ed;
+		}
+	}
+
+	&__Container {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: $gutter-large;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__Icon {
+		border: 1px solid black;
+		width: 10px;
+		height: 10px;
+	}
+
+	&__Content {
+		display: flex;
+		flex: 0 0 40%;
+		padding: $gutter-large;
+	}
+
+	&__Date {
+		flex: 0 0 40%;
+		padding: $gutter-large;
+	}
+}
