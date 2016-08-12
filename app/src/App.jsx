@@ -5,33 +5,44 @@ import React, {
 	Component
 } from 'react';
 import ReactDOM from 'react-dom';
+import {
+	hashHistory,
+	Link,
+	Router,
+	Route,
+} from 'react-router'
 
-import Avatars from './Main/Components/Avatars';
-import Content from './Main/Components/Content';
+import Header from './Main/Components/Header';
 
 class App extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			currentPage: 'home'
-		}
+			contentLoaded: false
+		};
 	}
 
 	render () {
-		// const viewStyle = this.state.currentPage === 'home' ?  'HomeView' : 'ActiveView';
+		const viewStyle = this.state.contentLoaded ? 'animate' : '';
 
 		return (
-			<div className={"App__Wrapper"}>
-				<Avatars
-					currentPage={this.state.currentPage}
-					onAvatarClick={(value) => this.onAvatarClick(value)}/>
-				<Content currentPage={this.state.currentPage}/>
+			<div>
+				<Header />
+				<div className={"App__ContentWrapper " + viewStyle}>
+					{React.cloneElement(this.props.children, {
+						contentHasLoaded: () => this.contentHasLoaded()
+					})}
+				</div>
 			</div>
 		)
 	}
 
 	onAvatarClick (value) {
 		this.setState({currentPage: value})
+	}
+
+	contentHasLoaded () {
+		this.setState({contentLoaded: true})
 	}
 }
 

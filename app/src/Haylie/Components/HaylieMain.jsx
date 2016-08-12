@@ -12,8 +12,7 @@ class HaylieMain extends Component {
 	}
 
 	render () {
-		if (this.props.currentPage !== 'haylie') {return null;}
-
+		console.log(this.props);
 		return (
 			<div>
 				<HaylieMasonry

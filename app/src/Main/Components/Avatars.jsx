@@ -59,13 +59,13 @@ class Avatars extends Component {
 
 	onAvatarClick (value) {
 		this.setState({disable: true});
-		this.props.onAvatarClick(value);
+		// this.props.onAvatarClick(value);
 	}
 }
 
 Avatars.propTypes = {
-	currentPage   : PropTypes.string,
-	onAvatarClick : PropTypes.func,
+	// currentPage   : PropTypes.string,
+	// onAvatarClick : PropTypes.func,
 }
 
 export default Avatars;
