@@ -22144,7 +22144,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _HaylieMain = __webpack_require__(207);
+	var _HaylieMain = __webpack_require__(188);
 	
 	var _HaylieMain2 = _interopRequireDefault(_HaylieMain);
 	
@@ -22271,7 +22271,70 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Masonry = __webpack_require__(189);
+	var _HaylieMasonry = __webpack_require__(189);
+	
+	var _HaylieMasonry2 = _interopRequireDefault(_HaylieMasonry);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var HaylieMain = function (_Component) {
+		_inherits(HaylieMain, _Component);
+	
+		function HaylieMain(props) {
+			_classCallCheck(this, HaylieMain);
+	
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(HaylieMain).call(this, props));
+		}
+	
+		_createClass(HaylieMain, [{
+			key: 'render',
+			value: function render() {
+				if (this.props.currentPage !== 'haylie') {
+					return null;
+				}
+	
+				return _react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement(_HaylieMasonry2.default, {
+						contentHasLoaded: this.props.contentHasLoaded })
+				);
+			}
+		}]);
+	
+		return HaylieMain;
+	}(_react.Component);
+	
+	HaylieMain.propTypes = {
+		contentHasLoaded: _react.PropTypes.func,
+		currentPage: _react.PropTypes.string
+	};
+	
+	exports.default = HaylieMain;
+
+/***/ },
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(5);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Masonry = __webpack_require__(190);
 	
 	var _Masonry2 = _interopRequireDefault(_Masonry);
 	
@@ -22319,7 +22382,7 @@
 	exports.default = HaylieMasonry;
 
 /***/ },
-/* 189 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22330,21 +22393,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	__webpack_require__(190);
+	__webpack_require__(191);
 	
 	var _react = __webpack_require__(5);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactMasonryComponent = __webpack_require__(192);
+	var _reactMasonryComponent = __webpack_require__(193);
 	
 	var _reactMasonryComponent2 = _interopRequireDefault(_reactMasonryComponent);
 	
-	var _lodash = __webpack_require__(204);
+	var _lodash = __webpack_require__(205);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	var _Config = __webpack_require__(206);
+	var _Config = __webpack_require__(207);
 	
 	var _Config2 = _interopRequireDefault(_Config);
 	
@@ -22513,13 +22576,13 @@
 	exports.default = Masonry;
 
 /***/ },
-/* 190 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(191);
+	var content = __webpack_require__(192);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -22539,7 +22602,7 @@
 	}
 
 /***/ },
-/* 191 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -22553,15 +22616,15 @@
 
 
 /***/ },
-/* 192 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isBrowser = typeof window !== 'undefined';
-	var Masonry = isBrowser ? window.Masonry || __webpack_require__(193) : null;
-	var imagesloaded = isBrowser ? __webpack_require__(200) : null;
-	var assign = __webpack_require__(201);
-	var debounce = __webpack_require__(202);
-	var omit = __webpack_require__(203);
+	var Masonry = isBrowser ? window.Masonry || __webpack_require__(194) : null;
+	var imagesloaded = isBrowser ? __webpack_require__(201) : null;
+	var assign = __webpack_require__(202);
+	var debounce = __webpack_require__(203);
+	var omit = __webpack_require__(204);
 	var React = __webpack_require__(5);
 	var refName = 'masonryContainer';
 	
@@ -22758,7 +22821,7 @@
 
 
 /***/ },
-/* 193 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22775,8 +22838,8 @@
 	  if ( true ) {
 	    // AMD
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(194),
-	        __webpack_require__(196)
+	        __webpack_require__(195),
+	        __webpack_require__(197)
 	      ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if ( typeof module == 'object' && module.exports ) {
 	    // CommonJS
@@ -22968,7 +23031,7 @@
 
 
 /***/ },
-/* 194 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22984,10 +23047,10 @@
 	  if ( true ) {
 	    // AMD - RequireJS
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(195),
 	        __webpack_require__(196),
 	        __webpack_require__(197),
-	        __webpack_require__(199)
+	        __webpack_require__(198),
+	        __webpack_require__(200)
 	      ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter, getSize, utils, Item ) {
 	        return factory( window, EvEmitter, getSize, utils, Item);
 	      }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -23911,7 +23974,7 @@
 
 
 /***/ },
-/* 195 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -24026,7 +24089,7 @@
 
 
 /***/ },
-/* 196 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24241,7 +24304,7 @@
 
 
 /***/ },
-/* 197 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -24258,7 +24321,7 @@
 	  if ( true ) {
 	    // AMD
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	      __webpack_require__(198)
+	      __webpack_require__(199)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( matchesSelector ) {
 	      return factory( window, matchesSelector );
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -24483,7 +24546,7 @@
 
 
 /***/ },
-/* 198 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -24542,7 +24605,7 @@
 
 
 /***/ },
-/* 199 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -24555,8 +24618,8 @@
 	  if ( true ) {
 	    // AMD - RequireJS
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(195),
-	        __webpack_require__(196)
+	        __webpack_require__(196),
+	        __webpack_require__(197)
 	      ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if ( typeof module == 'object' && module.exports ) {
 	    // CommonJS - Browserify, Webpack
@@ -25099,7 +25162,7 @@
 
 
 /***/ },
-/* 200 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -25116,7 +25179,7 @@
 	  if ( true ) {
 	    // AMD
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	      __webpack_require__(195)
+	      __webpack_require__(196)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter ) {
 	      return factory( window, EvEmitter );
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -25475,7 +25538,7 @@
 
 
 /***/ },
-/* 201 */
+/* 202 */
 /***/ function(module, exports) {
 
 	/**
@@ -26192,7 +26255,7 @@
 
 
 /***/ },
-/* 202 */
+/* 203 */
 /***/ function(module, exports) {
 
 	/**
@@ -26589,7 +26652,7 @@
 
 
 /***/ },
-/* 203 */
+/* 204 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -28152,7 +28215,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 204 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -44764,10 +44827,10 @@
 	  }
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(205)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(206)(module)))
 
 /***/ },
-/* 205 */
+/* 206 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -44783,7 +44846,7 @@
 
 
 /***/ },
-/* 206 */
+/* 207 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -44796,69 +44859,6 @@
 	};
 	
 	exports.default = Config;
-
-/***/ },
-/* 207 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(5);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _HaylieMasonry = __webpack_require__(188);
-	
-	var _HaylieMasonry2 = _interopRequireDefault(_HaylieMasonry);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var HaylieMain = function (_Component) {
-		_inherits(HaylieMain, _Component);
-	
-		function HaylieMain(props) {
-			_classCallCheck(this, HaylieMain);
-	
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(HaylieMain).call(this, props));
-		}
-	
-		_createClass(HaylieMain, [{
-			key: 'render',
-			value: function render() {
-				if (this.props.currentPage !== 'haylie') {
-					return null;
-				}
-	
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(_HaylieMasonry2.default, {
-						contentHasLoaded: this.props.contentHasLoaded })
-				);
-			}
-		}]);
-	
-		return HaylieMain;
-	}(_react.Component);
-	
-	HaylieMain.propTypes = {
-		contentHasLoaded: _react.PropTypes.func,
-		currentPage: _react.PropTypes.string
-	};
-	
-	exports.default = HaylieMain;
 
 /***/ },
 /* 208 */
@@ -44962,8 +44962,151 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
-					'PPPEEEENNISE'
+					{ className: 'Timeline__Wrapper' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'Timeline__Container' },
+						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'Timeline__Content' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Title of section 1'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
+							),
+							_react2.default.createElement(
+								'span',
+								{ className: 'Timeline__Date' },
+								'Jan 14'
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'Timeline__Container' },
+						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'Timeline__Content' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Title of section 2'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?'
+							),
+							_react2.default.createElement(
+								'span',
+								{ className: 'Timeline__Date' },
+								'Jan 18'
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'Timeline__Container' },
+						_react2.default.createElement('div', { className: 'Timeline__Icon Picture' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'Timeline__Content' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Title of section 3'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.'
+							),
+							_react2.default.createElement(
+								'span',
+								{ className: 'Timeline__Date' },
+								'Jan 24'
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'Timeline__Container' },
+						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'Timeline__Content' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Title of section 4'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
+							),
+							_react2.default.createElement(
+								'span',
+								{ className: 'Timeline__Date' },
+								'Feb 14'
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'Timeline__Container' },
+						_react2.default.createElement('div', { className: 'Timeline__Icon Location' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'Timeline__Content' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Title of section 5'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.'
+							),
+							_react2.default.createElement(
+								'span',
+								{ className: 'Timeline__Date' },
+								'Feb 18'
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'Timeline__Container' },
+						_react2.default.createElement('div', { className: 'Timeline__Icon Movie' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'Timeline__Content' },
+							_react2.default.createElement(
+								'h2',
+								null,
+								'Final Section'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'This is the content of the last section'
+							),
+							_react2.default.createElement(
+								'span',
+								{ className: 'Timeline__Date' },
+								'Feb 26'
+							)
+						)
+					)
 				);
 			}
 		}]);
