@@ -29,15 +29,20 @@
 	&__Block {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: $gutter-large;
 
 		&:last-child {
+			justify-content: space-between;
+			margin-bottom: $gutter-large;
 			margin-bottom: 0;
 		}
 
 		// Every 2nd block needs to be overidden
 		&:nth-child(2n) {
 			flex-direction: row-reverse;
+
+			&>.PrimaryContent {
+				transform: translateX(100%);
+			}
 
 			// CSS for the arrow tip
 			&>.PrimaryContent:before {
@@ -49,6 +54,14 @@
 
 			&>.SecondaryContent {
 				justify-content: flex-end;
+			}
+		}
+
+		&.Display {
+
+			&>.PrimaryContent {
+				opacity: 1;
+				transform: translateX(0);
 			}
 		}
 	}
@@ -71,6 +84,8 @@
 		border-radius: $gutter-small;
 		background-color: white;
 		position: relative;
+		opacity: 0;
+		transform: translateX(-100%);
 
 		// CSS for the arrow tip
 		&:before {

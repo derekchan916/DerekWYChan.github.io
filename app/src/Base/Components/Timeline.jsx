@@ -14,16 +14,14 @@ class Timeline extends Component {
 		};
 	}
 
-	// componentWillMount () {
-	// 	window.addEventListener('scroll', () => this.handleScroll());
-	// }
+	componentWillMount () {
+		this.showBlocks();
+		window.addEventListener('scroll', () => this.handleScroll());
+	}
 
 	componentWillUpdate (nextProps, nextState) {
-		// console.log('aosifhosdaf', this.refs, nextState.scrollY);
-		// window.refs = this.refs;
-		// this.refs.forEach((ref) => {
-		// 	console.log(ref)
-		// })
+		this.showBlocks();
+		window.refs = this.refs;
 	}
 
 	componentWillUnmount () {
@@ -76,7 +74,7 @@ class Timeline extends Component {
 						</div>
 					</div>
 
-					<div className="Timeline__Block">
+					<div className="Timeline__Block" ref="block4">
 						<div className="Timeline__PrimaryContent PrimaryContent">
 							<h2>Title of section 4</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
@@ -90,7 +88,7 @@ class Timeline extends Component {
 						</div>
 					</div>
 
-					<div className="Timeline__Block">
+					<div className="Timeline__Block" ref="block5">
 						<div className="Timeline__PrimaryContent PrimaryContent">
 							<h2>Title of section 5</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
@@ -102,14 +100,12 @@ class Timeline extends Component {
 						</div>
 					</div>
 
-					<div className="Timeline__Block">
-
+					<div className="Timeline__Block"  ref="block6">
 						<div className="Timeline__PrimaryContent PrimaryContent">
 							<h2>Final Section</h2>
 							<p>This is the content of the last section</p>
 						</div>
 						<div className="Timeline__Icon Movie">
-
 						</div>
 						<div className="Timeline__SecondaryContent SecondaryContent">
 							<h2 className="Timeline__Date">Feb 26</h2>
@@ -121,9 +117,17 @@ class Timeline extends Component {
 	}
 
 	handleScroll (event) {
-		// console.log(event.path[0].screenTop, event.path[0].pageYOffset, window.scrollY, window.screenTop)
-		// this.setState({scrollY: window.scrollY})
-		console.log('SFUHSDOFH', event)
+		this.setState({scrollY: window.scrollY})
+	}
+
+	showBlocks () {
+		const heightToAppear = window.innerHeight * 0.8;
+
+		Object.keys(this.refs).forEach((ref) => {
+			if (this.refs[ref].getBoundingClientRect().top < heightToAppear) {
+				this.refs[ref].classList.add("Display")
+			}
+		});
 	}
 }
 

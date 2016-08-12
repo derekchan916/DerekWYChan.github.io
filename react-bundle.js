@@ -44962,26 +44962,29 @@
 			return _this;
 		}
 	
-		// componentWillMount () {
-		// 	window.addEventListener('scroll', () => this.handleScroll());
-		// }
-	
 		_createClass(Timeline, [{
+			key: 'componentWillMount',
+			value: function componentWillMount() {
+				var _this2 = this;
+	
+				this.showBlocks();
+				window.addEventListener('scroll', function () {
+					return _this2.handleScroll();
+				});
+			}
+		}, {
 			key: 'componentWillUpdate',
 			value: function componentWillUpdate(nextProps, nextState) {
-				// console.log('aosifhosdaf', this.refs, nextState.scrollY);
-				// window.refs = this.refs;
-				// this.refs.forEach((ref) => {
-				// 	console.log(ref)
-				// })
+				this.showBlocks();
+				window.refs = this.refs;
 			}
 		}, {
 			key: 'componentWillUnmount',
 			value: function componentWillUnmount() {
-				var _this2 = this;
+				var _this3 = this;
 	
 				window.removeEventListener('scroll', function () {
-					return _this2.handleScroll();
+					return _this3.handleScroll();
 				});
 			}
 		}, {
@@ -45079,7 +45082,7 @@
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__Block' },
+							{ className: 'Timeline__Block', ref: 'block4' },
 							_react2.default.createElement(
 								'div',
 								{ className: 'Timeline__PrimaryContent PrimaryContent' },
@@ -45107,7 +45110,7 @@
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__Block' },
+							{ className: 'Timeline__Block', ref: 'block5' },
 							_react2.default.createElement(
 								'div',
 								{ className: 'Timeline__PrimaryContent PrimaryContent' },
@@ -45135,7 +45138,7 @@
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'Timeline__Block' },
+							{ className: 'Timeline__Block', ref: 'block6' },
 							_react2.default.createElement(
 								'div',
 								{ className: 'Timeline__PrimaryContent PrimaryContent' },
@@ -45167,9 +45170,20 @@
 		}, {
 			key: 'handleScroll',
 			value: function handleScroll(event) {
-				// console.log(event.path[0].screenTop, event.path[0].pageYOffset, window.scrollY, window.screenTop)
-				// this.setState({scrollY: window.scrollY})
-				console.log('SFUHSDOFH', event);
+				this.setState({ scrollY: window.scrollY });
+			}
+		}, {
+			key: 'showBlocks',
+			value: function showBlocks() {
+				var _this4 = this;
+	
+				var heightToAppear = window.innerHeight * 0.8;
+	
+				Object.keys(this.refs).forEach(function (ref) {
+					if (_this4.refs[ref].getBoundingClientRect().top < heightToAppear) {
+						_this4.refs[ref].classList.add("Display");
+					}
+				});
 			}
 		}]);
 	
@@ -45215,7 +45229,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Timeline__Wrapper {\n  background-color: #e9f0f5; }\n\n.Timeline__Container {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin: 40px 40px;\n  padding: 40px 0;\n  background-color: #e9f0f5; }\n  .Timeline__Container:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 50%;\n    height: 100%;\n    width: 5px;\n    background: #d7e4ed; }\n\n.Timeline__Block {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 20px; }\n  .Timeline__Block:last-child {\n    margin-bottom: 0; }\n  .Timeline__Block:nth-child(2n) {\n    flex-direction: row-reverse; }\n    .Timeline__Block:nth-child(2n) > .PrimaryContent:before {\n      border-right: 7px solid white;\n      border-left: none;\n      right: 100%;\n      left: inherit; }\n    .Timeline__Block:nth-child(2n) > .SecondaryContent {\n      justify-content: flex-end; }\n\n.Timeline__Icon {\n  border: 1px solid black;\n  width: 10px;\n  height: 10px; }\n\n.Timeline__PrimaryContent, .Timeline__SecondaryContent {\n  display: flex;\n  flex: 0 0 40%;\n  flex-direction: column;\n  padding: 20px; }\n\n.Timeline__PrimaryContent {\n  border-radius: 5px;\n  background-color: white;\n  position: relative; }\n  .Timeline__PrimaryContent:before {\n    content: '';\n    position: absolute;\n    top: 24px;\n    left: 100%;\n    height: 0;\n    width: 0;\n    border: 7px solid transparent;\n    border-left: 7px solid white; }\n\n.Timeline__SecondaryContent {\n  flex-direction: row; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n.Timeline__Wrapper {\n  background-color: #e9f0f5; }\n\n.Timeline__Container {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin: 40px 40px;\n  padding: 40px 0;\n  background-color: #e9f0f5; }\n  .Timeline__Container:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 50%;\n    height: 100%;\n    width: 5px;\n    background: #d7e4ed; }\n\n.Timeline__Block {\n  display: flex;\n  justify-content: space-between; }\n  .Timeline__Block:last-child {\n    justify-content: space-between;\n    margin-bottom: 20px;\n    margin-bottom: 0; }\n  .Timeline__Block:nth-child(2n) {\n    flex-direction: row-reverse; }\n    .Timeline__Block:nth-child(2n) > .PrimaryContent {\n      transform: translateX(100%); }\n    .Timeline__Block:nth-child(2n) > .PrimaryContent:before {\n      border-right: 7px solid white;\n      border-left: none;\n      right: 100%;\n      left: inherit; }\n    .Timeline__Block:nth-child(2n) > .SecondaryContent {\n      justify-content: flex-end; }\n  .Timeline__Block.Display > .PrimaryContent {\n    opacity: 1;\n    transform: translateX(0); }\n\n.Timeline__Icon {\n  border: 1px solid black;\n  width: 10px;\n  height: 10px; }\n\n.Timeline__PrimaryContent, .Timeline__SecondaryContent {\n  display: flex;\n  flex: 0 0 40%;\n  flex-direction: column;\n  padding: 20px; }\n\n.Timeline__PrimaryContent {\n  border-radius: 5px;\n  background-color: white;\n  position: relative;\n  opacity: 0;\n  transform: translateX(-100%); }\n  .Timeline__PrimaryContent:before {\n    content: '';\n    position: absolute;\n    top: 24px;\n    left: 100%;\n    height: 0;\n    width: 0;\n    border: 7px solid transparent;\n    border-left: 7px solid white; }\n\n.Timeline__SecondaryContent {\n  flex-direction: row; }\n", ""]);
 	
 	// exports
 
