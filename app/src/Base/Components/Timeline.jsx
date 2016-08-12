@@ -6,6 +6,8 @@ import React, {
 	PropTypes
 } from 'react';
 
+const WINDOW_APPEAR_PERCENTAGE = 0.85;
+
 class Timeline extends Component {
 	constructor (props) {
 		super(props);
@@ -15,8 +17,11 @@ class Timeline extends Component {
 	}
 
 	componentWillMount () {
-		this.showBlocks();
 		window.addEventListener('scroll', () => this.handleScroll());
+	}
+
+	componentDidMount () {
+		this.showBlocks();
 	}
 
 	componentWillUpdate (nextProps, nextState) {
@@ -121,7 +126,7 @@ class Timeline extends Component {
 	}
 
 	showBlocks () {
-		const heightToAppear = window.innerHeight * 0.8;
+		const heightToAppear = window.innerHeight * WINDOW_APPEAR_PERCENTAGE;
 
 		Object.keys(this.refs).forEach((ref) => {
 			if (this.refs[ref].getBoundingClientRect().top < heightToAppear) {

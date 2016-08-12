@@ -44948,6 +44948,8 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	var WINDOW_APPEAR_PERCENTAGE = 0.85;
+	
 	var Timeline = function (_Component) {
 		_inherits(Timeline, _Component);
 	
@@ -44967,10 +44969,14 @@
 			value: function componentWillMount() {
 				var _this2 = this;
 	
-				this.showBlocks();
 				window.addEventListener('scroll', function () {
 					return _this2.handleScroll();
 				});
+			}
+		}, {
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.showBlocks();
 			}
 		}, {
 			key: 'componentWillUpdate',
@@ -45177,7 +45183,7 @@
 			value: function showBlocks() {
 				var _this4 = this;
 	
-				var heightToAppear = window.innerHeight * 0.8;
+				var heightToAppear = window.innerHeight * WINDOW_APPEAR_PERCENTAGE;
 	
 				Object.keys(this.refs).forEach(function (ref) {
 					if (_this4.refs[ref].getBoundingClientRect().top < heightToAppear) {
