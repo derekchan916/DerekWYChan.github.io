@@ -18,7 +18,6 @@ class Content extends Component {
 
 	render () {
 		const viewStyle = this.state.contentLoaded ? 'animate' : '';
-		if (this.props.currentPage === 'home') {return null;}
 
 		return (
 			<div className={"Content__Wrapper " + viewStyle}>

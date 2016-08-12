@@ -50345,7 +50345,24 @@
 		value: true
 	});
 	var Config = {
-		'CLOUDINARY_NAME': 'dqqac1ydh'
+		'CLOUDINARY_NAME': 'dqqac1ydh',
+		'AVATAR_LIST': [{
+			name: 'Haylie',
+			value: 'haylie',
+			url: 'app/images/haylie-avatar.png'
+		}, {
+			name: 'Flora',
+			value: 'floraFrankie',
+			url: 'app/images/flora-avatar.png'
+		}, {
+			name: 'Lorena',
+			value: 'lorena',
+			url: 'app/images/lorena-avatar.png'
+		}, {
+			name: 'Derek',
+			value: 'derek',
+			url: 'app/images/derek-avatar.png'
+		}]
 	};
 	
 	exports.default = Config;
@@ -50744,6 +50761,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _Config = __webpack_require__(270);
+	
+	var _Config2 = _interopRequireDefault(_Config);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50751,24 +50772,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var AVATAR_LIST = [{
-		name: 'Haylie',
-		value: 'haylie',
-		url: 'app/images/haylie-avatar.png'
-	}, {
-		name: 'Flora',
-		value: 'floraFrankie',
-		url: 'app/images/flora-avatar.png'
-	}, {
-		name: 'Lorena',
-		value: 'lorena',
-		url: 'app/images/lorena-avatar.png'
-	}, {
-		name: 'Derek',
-		value: 'derek',
-		url: 'app/images/derek-avatar.png'
-	}];
 	
 	var PageList = function (_Component) {
 		_inherits(PageList, _Component);
@@ -50797,7 +50800,7 @@
 					_react2.default.createElement(
 						'div',
 						{ className: "PageList__Container" },
-						AVATAR_LIST.map(function (avatar, index) {
+						_Config2.default.AVATAR_LIST.map(function (avatar, index) {
 							return _react2.default.createElement('div', {
 								key: index,
 								className: "PageList__Avatar" + viewDisable,
@@ -50814,17 +50817,11 @@
 			key: 'onAvatarClick',
 			value: function onAvatarClick(value) {
 				this.setState({ disable: true });
-				// this.props.onAvatarClick(value);
 			}
 		}]);
 	
 		return PageList;
 	}(_react.Component);
-	
-	PageList.propTypes = {
-		// currentPage   : PropTypes.string,
-		// onAvatarClick : PropTypes.func,
-	};
 	
 	exports.default = PageList;
 

@@ -6,28 +6,7 @@ import React, {
 	PropTypes
 } from 'react';
 
-const AVATAR_LIST = [
-	{
-		name: 'Haylie',
-		value: 'haylie',
-		url: 'app/images/haylie-avatar.png'
-	},
-	{
-		name: 'Flora',
-		value: 'floraFrankie',
-		url: 'app/images/flora-avatar.png'
-	},
-	{
-		name: 'Lorena',
-		value: 'lorena',
-		url: 'app/images/lorena-avatar.png'
-	},
-	{
-		name: 'Derek',
-		value: 'derek',
-		url: 'app/images/derek-avatar.png'
-	},
-]
+import Config from '../../Main/Config'
 
 class PageList extends Component {
 	constructor (props) {
@@ -43,7 +22,7 @@ class PageList extends Component {
 		return (
 			<div className={"PageList__Wrapper"}>
 				<div className={"PageList__Container"}>
-					{AVATAR_LIST.map((avatar, index) => (
+					{Config.AVATAR_LIST.map((avatar, index) => (
 						<div
 							key={index}
 							className={"PageList__Avatar" + viewDisable}
@@ -59,13 +38,7 @@ class PageList extends Component {
 
 	onAvatarClick (value) {
 		this.setState({disable: true});
-		// this.props.onAvatarClick(value);
 	}
-}
-
-PageList.propTypes = {
-	// currentPage   : PropTypes.string,
-	// onAvatarClick : PropTypes.func,
 }
 
 export default PageList;
