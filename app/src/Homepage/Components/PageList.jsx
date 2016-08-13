@@ -6,7 +6,7 @@ import React, {
 	PropTypes
 } from 'react';
 
-import Config from '../../Main/Config'
+import Config from '../../Main/Config';
 
 class PageList extends Component {
 	constructor (props) {

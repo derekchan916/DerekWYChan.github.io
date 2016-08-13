@@ -81,3 +81,16 @@ $site-width-desktop-medium: 1200px;
 	0% { opacity: 0; }
 	100% { opacity: 1; }
 }
+
+@keyframes slideInFromRight {
+	0% { opacity: 0; transform: translateX(300%);}
+	100% { opacity: 1; transform: translateX(0%);}
+}
+@-webkit-keyframes slideInFromRight {
+	0% { opacity: 0; transform: translateX(300%);}
+	100% { opacity: 1; transform: translateX(0%);}
+}
+@-moz-keyframes slideInFromRight {
+	0% { opacity: 0; transform: translateX(300%);}
+	100% { opacity: 1; transform: translateX(0%);}
+}
