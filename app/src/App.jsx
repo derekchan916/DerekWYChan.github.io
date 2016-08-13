@@ -18,7 +18,8 @@ class App extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			contentLoaded: false
+			contentLoaded: false,
+			headerAvatarDisabled: true,
 		};
 	}
 
@@ -27,10 +28,12 @@ class App extends Component {
 
 		return (
 			<div>
-				<Header />
+				<Header
+					headerAvatarDisabled={this.state.headerAvatarDisabled}/>
 				<div className={"App__ContentWrapper " + viewStyle}>
 					{React.cloneElement(this.props.children, {
-						contentHasLoaded: () => this.contentHasLoaded()
+						contentHasLoaded: () => this.contentHasLoaded(),
+						showHeaderAvatar: () => this.showHeaderAvatar(),
 					})}
 				</div>
 			</div>
@@ -43,6 +46,10 @@ class App extends Component {
 
 	contentHasLoaded () {
 		this.setState({contentLoaded: true})
+	}
+
+	showHeaderAvatar () {
+		this.setState({headerAvatarDisabled: false})
 	}
 }
 

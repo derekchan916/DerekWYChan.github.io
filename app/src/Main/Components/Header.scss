@@ -5,6 +5,10 @@
 	&__Wrapper {
 		display: flex;
 		justify-content: center;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 1000;
 	}
 
 	&__Container {
@@ -30,6 +34,10 @@
 		display: flex;
 		flex: 0 1 350px;
 		justify-content: flex-start;
+
+		&.Disable {
+			display: none;
+		}
 
 		&--child {
 			background-size: 100%;

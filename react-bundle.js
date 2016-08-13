@@ -64,11 +64,11 @@
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _PageList = __webpack_require__(275);
+	var _PageList = __webpack_require__(249);
 	
 	var _PageList2 = _interopRequireDefault(_PageList);
 	
-	var _HaylieMain = __webpack_require__(251);
+	var _HaylieMain = __webpack_require__(252);
 	
 	var _HaylieMain2 = _interopRequireDefault(_HaylieMain);
 	
@@ -27538,7 +27538,8 @@
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
 	
 			_this.state = {
-				contentLoaded: false
+				contentLoaded: false,
+				headerAvatarDisabled: true
 			};
 			return _this;
 		}
@@ -27553,13 +27554,17 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_Header2.default, null),
+					_react2.default.createElement(_Header2.default, {
+						headerAvatarDisabled: this.state.headerAvatarDisabled }),
 					_react2.default.createElement(
 						'div',
 						{ className: "App__ContentWrapper " + viewStyle },
 						_react2.default.cloneElement(this.props.children, {
 							contentHasLoaded: function contentHasLoaded() {
 								return _this2.contentHasLoaded();
+							},
+							showHeaderAvatar: function showHeaderAvatar() {
+								return _this2.showHeaderAvatar();
 							}
 						})
 					)
@@ -27574,6 +27579,11 @@
 			key: 'contentHasLoaded',
 			value: function contentHasLoaded() {
 				this.setState({ contentLoaded: true });
+			}
+		}, {
+			key: 'showHeaderAvatar',
+			value: function showHeaderAvatar() {
+				this.setState({ headerAvatarDisabled: false });
 			}
 		}]);
 	
@@ -27642,7 +27652,7 @@
 	
 	var _reactRouter = __webpack_require__(179);
 	
-	var _Config = __webpack_require__(270);
+	var _Config = __webpack_require__(248);
 	
 	var _Config2 = _interopRequireDefault(_Config);
 	
@@ -27666,6 +27676,8 @@
 		_createClass(Header, [{
 			key: 'render',
 			value: function render() {
+				var viewDisable = this.props.headerAvatarDisabled ? 'Disable' : '';
+	
 				return _react2.default.createElement(
 					'div',
 					{ className: 'Header__Wrapper' },
@@ -27675,7 +27687,7 @@
 						_react2.default.createElement('div', { className: 'Header__Logo' }),
 						_react2.default.createElement(
 							'div',
-							{ className: 'Header__AvatarList' },
+							{ className: "Header__AvatarList" + viewDisable },
 							_Config2.default.AVATAR_LIST.map(function (avatar, index) {
 								return _react2.default.createElement(_reactRouter.Link, {
 									key: index,
@@ -27692,6 +27704,10 @@
 	
 		return Header;
 	}(_react.Component);
+	
+	Header.propTypes = {
+		headerAvatarDisabled: _react.PropTypes.bool
+	};
 	
 	exports.default = Header;
 
@@ -27730,16 +27746,167 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-webkit-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-moz-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n.Header__Wrapper {\n  display: flex;\n  justify-content: center; }\n\n.Header__Container {\n  display: flex;\n  flex: 0 1 900px;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 40px;\n  height: 100px;\n  font-weight: bold; }\n\n.Header__Logo {\n  background-image: url(\"/app/images/Logo.svg\");\n  background-repeat: no-repeat;\n  background-size: 100%;\n  width: 100px;\n  height: 100px; }\n\n.Header__AvatarList {\n  display: flex;\n  flex: 0 1 350px;\n  justify-content: flex-start; }\n  .Header__AvatarList--child {\n    background-size: 100%;\n    width: 50px;\n    height: 50px;\n    margin: 0 5px;\n    transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }\n    .Header__AvatarList--child:nth-child(1) {\n      animation: slideInFromRight 0.6s 0.3s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -webkit-animation: slideInFromRight 0.6s 0.3s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -moz-animation: slideInFromRight 0.6s 0.3s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -ms-animation: slideInFromRight 0.6s 0.3s 1 cubic-bezier(0.23, 1, 0.32, 1) both; }\n    .Header__AvatarList--child:nth-child(2) {\n      animation: slideInFromRight 0.6s 0.4s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -webkit-animation: slideInFromRight 0.6s 0.4s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -moz-animation: slideInFromRight 0.6s 0.4s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -ms-animation: slideInFromRight 0.6s 0.4s 1 cubic-bezier(0.23, 1, 0.32, 1) both; }\n    .Header__AvatarList--child:nth-child(3) {\n      animation: slideInFromRight 0.6s 0.5s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -webkit-animation: slideInFromRight 0.6s 0.5s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -moz-animation: slideInFromRight 0.6s 0.5s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -ms-animation: slideInFromRight 0.6s 0.5s 1 cubic-bezier(0.23, 1, 0.32, 1) both; }\n    .Header__AvatarList--child:nth-child(4) {\n      animation: slideInFromRight 0.6s 0.6s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -webkit-animation: slideInFromRight 0.6s 0.6s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -moz-animation: slideInFromRight 0.6s 0.6s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -ms-animation: slideInFromRight 0.6s 0.6s 1 cubic-bezier(0.23, 1, 0.32, 1) both; }\n    .Header__AvatarList--child:hover {\n      cursor: pointer; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-webkit-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-moz-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n.Header__Wrapper {\n  display: flex;\n  justify-content: center;\n  position: fixed;\n  width: 100%;\n  top: 0;\n  z-index: 1000; }\n\n.Header__Container {\n  display: flex;\n  flex: 0 1 900px;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 40px;\n  height: 100px;\n  font-weight: bold; }\n\n.Header__Logo {\n  background-image: url(\"/app/images/Logo.svg\");\n  background-repeat: no-repeat;\n  background-size: 100%;\n  width: 100px;\n  height: 100px; }\n\n.Header__AvatarList {\n  display: flex;\n  flex: 0 1 350px;\n  justify-content: flex-start; }\n  .Header__AvatarList.Disable {\n    display: none; }\n  .Header__AvatarList--child {\n    background-size: 100%;\n    width: 50px;\n    height: 50px;\n    margin: 0 5px;\n    transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }\n    .Header__AvatarList--child:nth-child(1) {\n      animation: slideInFromRight 0.6s 0.3s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -webkit-animation: slideInFromRight 0.6s 0.3s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -moz-animation: slideInFromRight 0.6s 0.3s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -ms-animation: slideInFromRight 0.6s 0.3s 1 cubic-bezier(0.23, 1, 0.32, 1) both; }\n    .Header__AvatarList--child:nth-child(2) {\n      animation: slideInFromRight 0.6s 0.4s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -webkit-animation: slideInFromRight 0.6s 0.4s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -moz-animation: slideInFromRight 0.6s 0.4s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -ms-animation: slideInFromRight 0.6s 0.4s 1 cubic-bezier(0.23, 1, 0.32, 1) both; }\n    .Header__AvatarList--child:nth-child(3) {\n      animation: slideInFromRight 0.6s 0.5s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -webkit-animation: slideInFromRight 0.6s 0.5s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -moz-animation: slideInFromRight 0.6s 0.5s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -ms-animation: slideInFromRight 0.6s 0.5s 1 cubic-bezier(0.23, 1, 0.32, 1) both; }\n    .Header__AvatarList--child:nth-child(4) {\n      animation: slideInFromRight 0.6s 0.6s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -webkit-animation: slideInFromRight 0.6s 0.6s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -moz-animation: slideInFromRight 0.6s 0.6s 1 cubic-bezier(0.23, 1, 0.32, 1) both;\n      -ms-animation: slideInFromRight 0.6s 0.6s 1 cubic-bezier(0.23, 1, 0.32, 1) both; }\n    .Header__AvatarList--child:hover {\n      cursor: pointer; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 248 */,
-/* 249 */,
-/* 250 */,
+/* 248 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	var Config = {
+		'CLOUDINARY_NAME': 'dqqac1ydh',
+		'AVATAR_LIST': [{
+			name: 'Haylie',
+			value: 'haylie',
+			url: 'app/images/haylie-avatar.png'
+		}, {
+			name: 'Flora',
+			value: 'floraFrankie',
+			url: 'app/images/flora-avatar.png'
+		}, {
+			name: 'Lorena',
+			value: 'lorena',
+			url: 'app/images/lorena-avatar.png'
+		}, {
+			name: 'Derek',
+			value: 'derek',
+			url: 'app/images/derek-avatar.png'
+		}]
+	};
+	
+	exports.default = Config;
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	__webpack_require__(250);
+	
+	var _react = __webpack_require__(5);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Config = __webpack_require__(248);
+	
+	var _Config2 = _interopRequireDefault(_Config);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var PageList = function (_Component) {
+		_inherits(PageList, _Component);
+	
+		function PageList(props) {
+			_classCallCheck(this, PageList);
+	
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PageList).call(this, props));
+	
+			_this.state = {
+				disable: false
+			};
+			return _this;
+		}
+	
+		_createClass(PageList, [{
+			key: 'render',
+			value: function render() {
+				var _this2 = this;
+	
+				var viewDisable = this.state.disable ? 'Disable' : '';
+	
+				return _react2.default.createElement(
+					'div',
+					{ className: "PageList__Wrapper" },
+					_react2.default.createElement(
+						'div',
+						{ className: "PageList__Container" },
+						_Config2.default.AVATAR_LIST.map(function (avatar, index) {
+							return _react2.default.createElement('div', {
+								key: index,
+								className: "PageList__Avatar" + viewDisable,
+								style: { backgroundImage: 'url(' + avatar.url + ')' },
+								onClick: function onClick() {
+									return _this2.onAvatarClick(avatar.value);
+								}
+							});
+						})
+					)
+				);
+			}
+		}, {
+			key: 'onAvatarClick',
+			value: function onAvatarClick(value) {
+				this.setState({ disable: true });
+			}
+		}]);
+	
+		return PageList;
+	}(_react.Component);
+	
+	exports.default = PageList;
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(251);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PageList.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PageList.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
 /* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-webkit-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-moz-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n.PageList__Wrapper {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  margin-top: 80px; }\n\n.PageList__Container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  max-width: 700px;\n  margin: 0 20px;\n  transform: translateZ(0); }\n\n.PageList__Avatar {\n  background-size: 100%;\n  margin: 10px;\n  width: 150px;\n  height: 150px; }\n  .PageList__Avatar:nth-child(1) {\n    animation: popIn 0.3s 0s 1 ease both;\n    -webkit-animation: popIn 0.3s 0s 1 ease both;\n    -moz-animation: popIn 0.3s 0s 1 ease both;\n    -ms-animation: popIn 0.3s 0s 1 ease both; }\n  .PageList__Avatar:nth-child(2) {\n    animation: popIn 0.6s 0s 1 ease both;\n    -webkit-animation: popIn 0.6s 0s 1 ease both;\n    -moz-animation: popIn 0.6s 0s 1 ease both;\n    -ms-animation: popIn 0.6s 0s 1 ease both; }\n  .PageList__Avatar:nth-child(3) {\n    animation: popIn 0.9s 0s 1 ease both;\n    -webkit-animation: popIn 0.9s 0s 1 ease both;\n    -moz-animation: popIn 0.9s 0s 1 ease both;\n    -ms-animation: popIn 0.9s 0s 1 ease both; }\n  .PageList__Avatar:nth-child(4) {\n    animation: popIn 1.2s 0s 1 ease both;\n    -webkit-animation: popIn 1.2s 0s 1 ease both;\n    -moz-animation: popIn 1.2s 0s 1 ease both;\n    -ms-animation: popIn 1.2s 0s 1 ease both; }\n  .PageList__Avatar.Disable {\n    animation: popOut 0.2s 0s 1 ease both;\n    -webkit-animation: popOut 0.2s 0s 1 ease both;\n    -moz-animation: popOut 0.2s 0s 1 ease both;\n    -ms-animation: popOut 0.2s 0s 1 ease both; }\n  .PageList__Avatar:hover {\n    cursor: pointer; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27754,7 +27921,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _HaylieMasonry = __webpack_require__(252);
+	var _HaylieMasonry = __webpack_require__(253);
 	
 	var _HaylieMasonry2 = _interopRequireDefault(_HaylieMasonry);
 	
@@ -27798,7 +27965,7 @@
 	exports.default = HaylieMain;
 
 /***/ },
-/* 252 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27813,7 +27980,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Masonry = __webpack_require__(253);
+	var _Masonry = __webpack_require__(254);
 	
 	var _Masonry2 = _interopRequireDefault(_Masonry);
 	
@@ -27861,7 +28028,7 @@
 	exports.default = HaylieMasonry;
 
 /***/ },
-/* 253 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27872,21 +28039,21 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	__webpack_require__(254);
+	__webpack_require__(255);
 	
 	var _react = __webpack_require__(5);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactMasonryComponent = __webpack_require__(256);
+	var _reactMasonryComponent = __webpack_require__(257);
 	
 	var _reactMasonryComponent2 = _interopRequireDefault(_reactMasonryComponent);
 	
-	var _lodash = __webpack_require__(268);
+	var _lodash = __webpack_require__(269);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	var _Config = __webpack_require__(270);
+	var _Config = __webpack_require__(248);
 	
 	var _Config2 = _interopRequireDefault(_Config);
 	
@@ -28055,13 +28222,13 @@
 	exports.default = Masonry;
 
 /***/ },
-/* 254 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(255);
+	var content = __webpack_require__(256);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -28081,7 +28248,7 @@
 	}
 
 /***/ },
-/* 255 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -28095,15 +28262,15 @@
 
 
 /***/ },
-/* 256 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isBrowser = typeof window !== 'undefined';
-	var Masonry = isBrowser ? window.Masonry || __webpack_require__(257) : null;
-	var imagesloaded = isBrowser ? __webpack_require__(264) : null;
-	var assign = __webpack_require__(265);
-	var debounce = __webpack_require__(266);
-	var omit = __webpack_require__(267);
+	var Masonry = isBrowser ? window.Masonry || __webpack_require__(258) : null;
+	var imagesloaded = isBrowser ? __webpack_require__(265) : null;
+	var assign = __webpack_require__(266);
+	var debounce = __webpack_require__(267);
+	var omit = __webpack_require__(268);
 	var React = __webpack_require__(5);
 	var refName = 'masonryContainer';
 	
@@ -28300,7 +28467,7 @@
 
 
 /***/ },
-/* 257 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -28317,8 +28484,8 @@
 	  if ( true ) {
 	    // AMD
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(258),
-	        __webpack_require__(260)
+	        __webpack_require__(259),
+	        __webpack_require__(261)
 	      ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if ( typeof module == 'object' && module.exports ) {
 	    // CommonJS
@@ -28510,7 +28677,7 @@
 
 
 /***/ },
-/* 258 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -28526,10 +28693,10 @@
 	  if ( true ) {
 	    // AMD - RequireJS
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(259),
 	        __webpack_require__(260),
 	        __webpack_require__(261),
-	        __webpack_require__(263)
+	        __webpack_require__(262),
+	        __webpack_require__(264)
 	      ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter, getSize, utils, Item ) {
 	        return factory( window, EvEmitter, getSize, utils, Item);
 	      }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -29453,7 +29620,7 @@
 
 
 /***/ },
-/* 259 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -29568,7 +29735,7 @@
 
 
 /***/ },
-/* 260 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -29783,7 +29950,7 @@
 
 
 /***/ },
-/* 261 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -29800,7 +29967,7 @@
 	  if ( true ) {
 	    // AMD
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	      __webpack_require__(262)
+	      __webpack_require__(263)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( matchesSelector ) {
 	      return factory( window, matchesSelector );
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -30025,7 +30192,7 @@
 
 
 /***/ },
-/* 262 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -30084,7 +30251,7 @@
 
 
 /***/ },
-/* 263 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -30097,8 +30264,8 @@
 	  if ( true ) {
 	    // AMD - RequireJS
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(259),
-	        __webpack_require__(260)
+	        __webpack_require__(260),
+	        __webpack_require__(261)
 	      ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if ( typeof module == 'object' && module.exports ) {
 	    // CommonJS - Browserify, Webpack
@@ -30641,7 +30808,7 @@
 
 
 /***/ },
-/* 264 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -30658,7 +30825,7 @@
 	  if ( true ) {
 	    // AMD
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	      __webpack_require__(259)
+	      __webpack_require__(260)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter ) {
 	      return factory( window, EvEmitter );
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -31017,7 +31184,7 @@
 
 
 /***/ },
-/* 265 */
+/* 266 */
 /***/ function(module, exports) {
 
 	/**
@@ -31734,7 +31901,7 @@
 
 
 /***/ },
-/* 266 */
+/* 267 */
 /***/ function(module, exports) {
 
 	/**
@@ -32131,7 +32298,7 @@
 
 
 /***/ },
-/* 267 */
+/* 268 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -33694,7 +33861,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 268 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -50306,10 +50473,10 @@
 	  }
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(269)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(270)(module)))
 
 /***/ },
-/* 269 */
+/* 270 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -50323,38 +50490,6 @@
 		return module;
 	}
 
-
-/***/ },
-/* 270 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var Config = {
-		'CLOUDINARY_NAME': 'dqqac1ydh',
-		'AVATAR_LIST': [{
-			name: 'Haylie',
-			value: 'haylie',
-			url: 'app/images/haylie-avatar.png'
-		}, {
-			name: 'Flora',
-			value: 'floraFrankie',
-			url: 'app/images/flora-avatar.png'
-		}, {
-			name: 'Lorena',
-			value: 'lorena',
-			url: 'app/images/lorena-avatar.png'
-		}, {
-			name: 'Derek',
-			value: 'derek',
-			url: 'app/images/derek-avatar.png'
-		}]
-	};
-	
-	exports.default = Config;
 
 /***/ },
 /* 271 */
@@ -50728,128 +50863,6 @@
 	
 	// module
 	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-webkit-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-moz-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n.Timeline__Wrapper {\n  background-color: #e9f0f5; }\n\n.Timeline__Container {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  margin: 40px 40px;\n  padding: 40px 0;\n  background-color: #e9f0f5; }\n  .Timeline__Container:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 50%;\n    height: 100%;\n    width: 5px;\n    background: #d7e4ed; }\n\n.Timeline__Block {\n  display: flex;\n  justify-content: space-between; }\n  .Timeline__Block:last-child {\n    justify-content: space-between;\n    margin-bottom: 20px;\n    margin-bottom: 0; }\n  .Timeline__Block:nth-child(2n) {\n    flex-direction: row-reverse; }\n    .Timeline__Block:nth-child(2n) > .PrimaryContent {\n      transform: translateX(100%); }\n    .Timeline__Block:nth-child(2n) > .PrimaryContent:before {\n      border-right: 7px solid white;\n      border-left: none;\n      right: 100%;\n      left: inherit; }\n    .Timeline__Block:nth-child(2n) > .SecondaryContent {\n      justify-content: flex-end; }\n  .Timeline__Block.Display > .PrimaryContent {\n    transition: all 1000ms cubic-bezier(0.68, -0.55, 0.265, 1.55);\n    opacity: 1;\n    transform: translateX(0); }\n\n.Timeline__Icon {\n  border: 1px solid black;\n  width: 10px;\n  height: 10px; }\n\n.Timeline__PrimaryContent, .Timeline__SecondaryContent {\n  display: flex;\n  flex: 0 0 40%;\n  flex-direction: column;\n  padding: 20px; }\n\n.Timeline__PrimaryContent {\n  border-radius: 5px;\n  background-color: white;\n  position: relative;\n  opacity: 0;\n  transform: translateX(-100%); }\n  .Timeline__PrimaryContent:before {\n    content: '';\n    position: absolute;\n    top: 24px;\n    left: 100%;\n    height: 0;\n    width: 0;\n    border: 7px solid transparent;\n    border-left: 7px solid white; }\n\n.Timeline__SecondaryContent {\n  flex-direction: row; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	__webpack_require__(276);
-	
-	var _react = __webpack_require__(5);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _Config = __webpack_require__(270);
-	
-	var _Config2 = _interopRequireDefault(_Config);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var PageList = function (_Component) {
-		_inherits(PageList, _Component);
-	
-		function PageList(props) {
-			_classCallCheck(this, PageList);
-	
-			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PageList).call(this, props));
-	
-			_this.state = {
-				disable: false
-			};
-			return _this;
-		}
-	
-		_createClass(PageList, [{
-			key: 'render',
-			value: function render() {
-				var _this2 = this;
-	
-				var viewDisable = this.state.disable ? 'Disable' : '';
-	
-				return _react2.default.createElement(
-					'div',
-					{ className: "PageList__Wrapper" },
-					_react2.default.createElement(
-						'div',
-						{ className: "PageList__Container" },
-						_Config2.default.AVATAR_LIST.map(function (avatar, index) {
-							return _react2.default.createElement('div', {
-								key: index,
-								className: "PageList__Avatar" + viewDisable,
-								style: { backgroundImage: 'url(' + avatar.url + ')' },
-								onClick: function onClick() {
-									return _this2.onAvatarClick(avatar.value);
-								}
-							});
-						})
-					)
-				);
-			}
-		}, {
-			key: 'onAvatarClick',
-			value: function onAvatarClick(value) {
-				this.setState({ disable: true });
-			}
-		}]);
-	
-		return PageList;
-	}(_react.Component);
-	
-	exports.default = PageList;
-
-/***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(277);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PageList.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./PageList.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 277 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  0% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-moz-keyframes fadeOut {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-webkit-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n@-moz-keyframes slideInFromRight {\n  0% {\n    opacity: 0;\n    transform: translateX(300%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0%); } }\n\n.PageList__Wrapper {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  margin-top: 80px; }\n\n.PageList__Container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  max-width: 700px;\n  margin: 0 20px;\n  transform: translateZ(0); }\n\n.PageList__Avatar {\n  background-size: 100%;\n  margin: 10px;\n  width: 150px;\n  height: 150px; }\n  .PageList__Avatar:nth-child(1) {\n    animation: popIn 0.3s 0s 1 ease both;\n    -webkit-animation: popIn 0.3s 0s 1 ease both;\n    -moz-animation: popIn 0.3s 0s 1 ease both;\n    -ms-animation: popIn 0.3s 0s 1 ease both; }\n  .PageList__Avatar:nth-child(2) {\n    animation: popIn 0.6s 0s 1 ease both;\n    -webkit-animation: popIn 0.6s 0s 1 ease both;\n    -moz-animation: popIn 0.6s 0s 1 ease both;\n    -ms-animation: popIn 0.6s 0s 1 ease both; }\n  .PageList__Avatar:nth-child(3) {\n    animation: popIn 0.9s 0s 1 ease both;\n    -webkit-animation: popIn 0.9s 0s 1 ease both;\n    -moz-animation: popIn 0.9s 0s 1 ease both;\n    -ms-animation: popIn 0.9s 0s 1 ease both; }\n  .PageList__Avatar:nth-child(4) {\n    animation: popIn 1.2s 0s 1 ease both;\n    -webkit-animation: popIn 1.2s 0s 1 ease both;\n    -moz-animation: popIn 1.2s 0s 1 ease both;\n    -ms-animation: popIn 1.2s 0s 1 ease both; }\n  .PageList__Avatar.Disable {\n    animation: popOut 0.2s 0s 1 ease both;\n    -webkit-animation: popOut 0.2s 0s 1 ease both;\n    -moz-animation: popOut 0.2s 0s 1 ease both;\n    -ms-animation: popOut 0.2s 0s 1 ease both; }\n  .PageList__Avatar:hover {\n    cursor: pointer; }\n", ""]);
 	
 	// exports
 
