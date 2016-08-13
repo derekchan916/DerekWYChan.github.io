@@ -27687,7 +27687,7 @@
 						_react2.default.createElement('div', { className: 'Header__Logo' }),
 						_react2.default.createElement(
 							'div',
-							{ className: "Header__AvatarList" + viewDisable },
+							{ className: "Header__AvatarList " + viewDisable },
 							_Config2.default.AVATAR_LIST.map(function (avatar, index) {
 								return _react2.default.createElement(_reactRouter.Link, {
 									key: index,
@@ -27801,6 +27801,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactRouter = __webpack_require__(179);
+	
 	var _Config = __webpack_require__(248);
 	
 	var _Config2 = _interopRequireDefault(_Config);
@@ -27836,14 +27838,15 @@
 	
 				return _react2.default.createElement(
 					'div',
-					{ className: "PageList__Wrapper" },
+					{ className: 'PageList__Wrapper' },
 					_react2.default.createElement(
 						'div',
-						{ className: "PageList__Container" },
+						{ className: 'PageList__Container' },
 						_Config2.default.AVATAR_LIST.map(function (avatar, index) {
-							return _react2.default.createElement('div', {
+							return _react2.default.createElement(_reactRouter.Link, {
 								key: index,
-								className: "PageList__Avatar" + viewDisable,
+								to: avatar.value,
+								className: "PageList__Avatar " + viewDisable,
 								style: { backgroundImage: 'url(' + avatar.url + ')' },
 								onClick: function onClick() {
 									return _this2.onAvatarClick(avatar.value);
@@ -27857,11 +27860,16 @@
 			key: 'onAvatarClick',
 			value: function onAvatarClick(value) {
 				this.setState({ disable: true });
+				this.props.showHeaderAvatar();
 			}
 		}]);
 	
 		return PageList;
 	}(_react.Component);
+	
+	PageList.propTypes = {
+		showHeaderAvatar: _react.PropTypes.func
+	};
 	
 	exports.default = PageList;
 

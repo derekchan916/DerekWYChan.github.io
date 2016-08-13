@@ -19,7 +19,7 @@ class Header extends Component {
 			<div className="Header__Wrapper">
 				<div className="Header__Container">
 					<div className="Header__Logo"></div>
-					<div className={"Header__AvatarList" + viewDisable}>
+					<div className={"Header__AvatarList " + viewDisable}>
 						{Config.AVATAR_LIST.map((avatar, index) => (
 							<Link
 								key={index}

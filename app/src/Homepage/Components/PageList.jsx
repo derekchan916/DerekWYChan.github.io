@@ -5,6 +5,9 @@ import React, {
 	Component,
 	PropTypes
 } from 'react';
+import {
+	Link,
+} from 'react-router';
 
 import Config from '../../Main/Config';
 
@@ -20,16 +23,17 @@ class PageList extends Component {
 		const viewDisable = this.state.disable ? 'Disable' : '';
 
 		return (
-			<div className={"PageList__Wrapper"}>
-				<div className={"PageList__Container"}>
+			<div className="PageList__Wrapper">
+				<div className="PageList__Container">
 					{Config.AVATAR_LIST.map((avatar, index) => (
-						<div
+						<Link
 							key={index}
-							className={"PageList__Avatar" + viewDisable}
+							to={avatar.value}
+							className={"PageList__Avatar " + viewDisable}
 							style={{backgroundImage:'url(' + avatar.url + ')'}}
 							onClick={() => this.onAvatarClick(avatar.value)}
 							>
-						</div>
+						</Link>
 					))}
 				</div>
 			</div>
@@ -38,7 +42,12 @@ class PageList extends Component {
 
 	onAvatarClick (value) {
 		this.setState({disable: true});
+		this.props.showHeaderAvatar();
 	}
+}
+
+PageList.propTypes = {
+	showHeaderAvatar: PropTypes.func,
 }
 
 export default PageList;
