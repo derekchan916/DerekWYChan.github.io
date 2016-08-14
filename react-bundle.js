@@ -27951,6 +27951,11 @@
 		}
 	
 		_createClass(HaylieMain, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.props.showHeaderAvatar();
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
@@ -50537,6 +50542,11 @@
 		}
 	
 		_createClass(FloraFrankieMain, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.props.showHeaderAvatar();
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(

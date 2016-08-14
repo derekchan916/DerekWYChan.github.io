@@ -11,6 +11,10 @@ class FloraFrankieMain extends Component {
 		super(props);
 	}
 
+	componentDidMount() {
+		this.props.showHeaderAvatar();
+	}
+
 	render () {
 		return (
 			<div>
